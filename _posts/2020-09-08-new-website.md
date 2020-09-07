@@ -18,6 +18,6 @@ head(tweets)
 ```
 
 
-```{r, echo=TRUE}
+```
 summary(cars)
 ```
