@@ -49,7 +49,7 @@ google_site_verification: google_meta_tag_verification # change to your verifica
 baseurl: ''
 
 # Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
-timezone: Asia/Shanghai
+timezone: Europe/London
 
 google_analytics:
   id: ''          # Fill with your Google Analytics ID
@@ -76,7 +76,7 @@ disqus:
 #
 #     dark   - Use the dark color scheme
 #
-theme_mode: dual
+theme_mode: dark
 
 # boolean type, global switch for ToC in posts.
 toc: true
