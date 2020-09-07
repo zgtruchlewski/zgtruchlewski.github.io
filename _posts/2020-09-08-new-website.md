@@ -9,3 +9,11 @@ pin: true
 ---
 
 Welcome to my new website! And more adventures...
+
+```{r}
+library(streamR)
+setwd("/Users/zbigniewtruchlewski/Dropbox/Github/TextAnalysis_MY459_LT2020/pset2-joezbig_erc_solid/lab-session")
+tweets <- parseTweets("trump-tweets.json")
+head(tweets)
+```
+
