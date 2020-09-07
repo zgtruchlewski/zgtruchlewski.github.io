@@ -7,4 +7,4 @@ tags: [news]
 toc: false
 ---
 
-Welcome to my new website!
+Welcome to my new website! And more adventures...
