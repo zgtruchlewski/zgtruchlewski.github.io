@@ -1,7 +1,7 @@
 ---
 title: Statistical dictionary
 author: Zbigniew Truchlewski
-date: 2020-06-07 21:34:00 +0000
+date: 2020-09-07 19:34:00 +0000
 categories: [Website]
 tags: [learning stats]
 toc: true
@@ -9,9 +9,7 @@ math: true
 pin: true
 ---
 
-# Statistical dictionary 
-
-While learning stats, many terms were daunting. Sometimes, I did not know whether they are insults thrown by Capitaine Haddock
+While learning stats, many terms were daunting. Sometimes, I did not know whether they are insults thrown by [Capitaine Haddock](https://en.wikipedia.org/wiki/Captain_Haddock#Expletives)
 
 These are the most important concepts we've seen in McElreath's book and in the course. Try to skim this through and see what sticks and what does not. Also, if you come by better definitions, please do send them to me!
 
