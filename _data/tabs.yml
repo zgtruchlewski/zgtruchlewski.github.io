@@ -11,8 +11,8 @@
 -
   name: "About"
   icon: "fas fa-info"
-  path: tabs
-  url: about
+  # path: tabs
+  # url: about
 -
   name: "Research"
   icon: "fas fa-research"
