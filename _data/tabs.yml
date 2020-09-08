@@ -5,9 +5,9 @@
 #  MIT Licensed
 
 
--
-  name: Home
-  icon: "fas fa-home"
+# -
+#   name: Home
+#   icon: "fas fa-home"
 -
   name: "About"
   icon: "fas fa-info"
