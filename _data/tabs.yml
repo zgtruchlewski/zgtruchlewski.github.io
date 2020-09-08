@@ -15,7 +15,7 @@
   # url: about
 -
   name: "Research"
-  icon: "fas fa-research"
+  icon: "fas fa-align-justify"
   path: tabs
   url: research
 -
