@@ -8,7 +8,7 @@ title: Welcome!
 # MIT License
 ---
 
-I am a postdoc at the London School of Economics in the ERC SOLID Project led by Waltraud Schelkle. As a political economist, I am interested in the politics of macroeconomic policies, austerity politics, the Euro and Central-Eastern Europe and Bayesian statistics.  I have published on the comparative politics of taxation, the political economy of the Euro, the external governance of the Euro, on fiscal policy in Germany and Central-Eastern European politics.
+I am a postdoc at the [London School of Economics](https://www.lse.ac.uk/european-institute) in the ERC SOLID Project led by Waltraud Schelkle. As a political economist, I am interested in the politics of macroeconomic policies, austerity politics, the Euro and Central-Eastern Europe and Bayesian statistics.  I have published on the comparative politics of taxation, the political economy of the Euro, the external governance of the Euro, on fiscal policy in Germany and Central-Eastern European politics.
 
 Previously, I was a Swiss Government Excellence Scholar at the University of Geneva, working with Thomas Sattler. I’m a former Max Weber Fellow at the SPS department of the EUI, where I was mentored by Dorothee Bohle. I received my PhD from the Central European University (CEU) summa cum laude with no revisions under the supervision of Achim Kemmerling. My PhD was awarded the best doctoral dissertation prize for my work on the social sources of austerity in the UK and France. At CEU, I chaired the Political Economy Research Group (PERG). 
 
