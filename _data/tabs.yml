@@ -19,6 +19,11 @@
   path: tabs
   url: research
 -
+  name: "Teaching"
+  icon: "fas fa-school"
+  path: tabs
+  url: teaching
+-
   name: Categories
   icon: "fas fa-stream"
   path: tabs
