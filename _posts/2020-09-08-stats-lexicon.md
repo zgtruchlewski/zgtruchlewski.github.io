@@ -9,9 +9,11 @@ math: true
 pin: true
 ---
 
-While learning stats, many terms were daunting. Sometimes, I did not know whether they are insults thrown by [Capitaine Haddock](https://en.wikipedia.org/wiki/Captain_Haddock#Expletives)
+Many statistical terms are daunting and ambiguous, and many students and scholars (inclduing myself) are often times confused. Sometimes, it is hard to distinguish them from expletives used by [Capitaine Haddock](https://en.wikipedia.org/wiki/Captain_Haddock#Expletives). This blog post helps you to avoid this confusion with a short statistical glossary. Let me know where I can improve it!
 
-These are the most important concepts we've seen in McElreath's book and in the course. Try to skim this through and see what sticks and what does not. Also, if you come by better definitions, please do send them to me!
+- *collider:* common effect of two causes. In DAGs where two arrows collide. Thus if you condition on this collider, there can be an association between these two causes even though there is no causal relation between them. This is due to the fact that information circulates from one cause to the effect to the second cause. This leads to *selection bias*: association between A and Y even if A does not cause Y. NB: a common effect is not necessarily a collider: a common effect can be the effect of a collider. Selection bias also arises in this case if we condition on the effect of a collider.
+
+<!-- These are the most important concepts we've seen in McElreath's book and in the course. Try to skim this through and see what sticks and what does not. Also, if you come by better definitions, please do send them to me!
 
 For definitions: Gelman blog, @parkertransparency2016, Gelman about [Rubin](http://www.stat.columbia.edu/~gelman/research/published/rubin.pdf) and @rohrercausation2018. See also scan of Peter John in the folder. 
 
@@ -79,3 +81,4 @@ See Frank Harrel here: http://biostat.mc.vanderbilt.edu/wiki/Main/CourseBios330C
 - *under-dispersion*: When the data has less dispersion than expected. This can arise when there is for instance *autocorrelation*. This means when an observation is dependent upon past or future values, the observed counts has often less variation. 
 - *variance-covariance matrix:* 
 - *zero-inflated outcomes:* When the zeros in a distribution come from different distributions, that is: there are different processes at play of why zero may arise (either nothing happened or the process in question failed to get started). Thus we need a mixture model to model the two or more processes at play. See section 11.2 of McElreath's book and his example of monks not producing manuscripts any given day either because they did not finish it or because they are drunk.
+ -->
