@@ -5,9 +5,9 @@
 #  MIT Licensed
 
 
--
-  name: Home
-  icon: "fas fa-home"
+# -
+#   name: Home
+#   icon: "fas fa-home"
 -
   name: "About"
   icon: "fas fa-info"
@@ -23,11 +23,11 @@
   icon: "fas fa-school"
   path: tabs
   url: teaching
--
-  name: Categories
-  icon: "fas fa-stream"
-  path: tabs
-  url: categories
+# -
+#   name: Categories
+#   icon: "fas fa-stream"
+#   path: tabs
+#   url: categories
 -
   name: "Tags"
   icon: "fas fa-tags"
