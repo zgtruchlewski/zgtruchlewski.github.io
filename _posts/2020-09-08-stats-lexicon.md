@@ -9,7 +9,7 @@ math: true
 pin: true
 ---
 
-Many statistical terms are daunting and ambiguous, and even more students and scholars (inclduing myself) become confused. Sometimes, it is even hard to distinguish statistical concepts from expletives used by [Capitaine Haddock](https://en.wikipedia.org/wiki/Captain_Haddock#Expletives). 
+Many statistical terms are daunting and ambiguous, and even more students and scholars (inclduing myself) become confused. Sometimes, it is even hard to distinguish statistical concepts from expletives used by [Captain Haddock](https://en.wikipedia.org/wiki/Captain_Haddock#Expletives). 
 
 Strangely enough, I have not yet come across a statistical book that would have a useful glossary of statistical terms that would help lift the fog when needed most. 
 
