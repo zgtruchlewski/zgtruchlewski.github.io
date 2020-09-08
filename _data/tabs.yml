@@ -12,7 +12,7 @@
   name: "About"
   icon: "fas fa-info"
   path: tabs
-  url: about
+  # url: about
 -
   name: "Research"
   icon: "fas fa-book-open"
