@@ -15,7 +15,7 @@ Strangely enough, I have not yet come across a statistical book that would have 
 
 This blog post helps you (and me) to avoid this confusion with a short statistical glossary. Let me know where I can improve it!
 
-- *collider:* common effect of two causes. In DAGs where two arrows collide. Thus if you condition on this collider, there can be an association between these two causes even though there is no causal relation between them. This is due to the fact that information circulates from one cause to the effect to the second cause. This leads to *selection bias*: association between A and Y even if A does not cause Y. NB: a common effect is not necessarily a collider: a common effect can be the effect of a collider. Selection bias also arises in this case if we condition on the effect of a collider.
+- **collider:** common effect of two causes. In DAGs where two arrows collide. Thus if you condition on this collider, there can be an association between these two causes even though there is no causal relation between them. This is due to the fact that information circulates from one cause to the effect to the second cause. This leads to *selection bias*: association between A and Y even if A does not cause Y. NB: a common effect is not necessarily a collider: a common effect can be the effect of a collider. Selection bias also arises in this case if we condition on the effect of a collider.
 
 <!-- These are the most important concepts we've seen in McElreath's book and in the course. Try to skim this through and see what sticks and what does not. Also, if you come by better definitions, please do send them to me!
 
