@@ -1,5 +1,5 @@
 ---
-title: About
+title: Welcome!
 
 # The About page
 # v2.0
@@ -7,8 +7,6 @@ title: About
 # © 2017-2019 Cotes Chung
 # MIT License
 ---
-
-Ciao!
 
 I am a postdoc at the London School of Economics in the ERC SOLID Project led by Waltraud Schelkle. As a political economist, I am interested in the politics of macroeconomic policies, austerity politics, the Euro and Central-Eastern Europe and Bayesian statistics.  I have published on the comparative politics of taxation, the political economy of the Euro, the external governance of the Euro, on fiscal policy in Germany and Central-Eastern European politics.
 
