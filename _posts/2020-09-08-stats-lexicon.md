@@ -9,7 +9,11 @@ math: true
 pin: true
 ---
 
-Many statistical terms are daunting and ambiguous, and many students and scholars (inclduing myself) are often times confused. Sometimes, it is hard to distinguish them from expletives used by [Capitaine Haddock](https://en.wikipedia.org/wiki/Captain_Haddock#Expletives). This blog post helps you to avoid this confusion with a short statistical glossary. Let me know where I can improve it!
+Many statistical terms are daunting and ambiguous, and even more students and scholars (inclduing myself) become confused. Sometimes, it is even hard to distinguish statistical concepts from expletives used by [Capitaine Haddock](https://en.wikipedia.org/wiki/Captain_Haddock#Expletives). 
+
+Strangely enough, I have not yet come across a statistical book that would have a useful glossary of statistical terms that would help lift the fog when needed most. 
+
+This blog post helps you to avoid this confusion with a short statistical glossary. Let me know where I can improve it!
 
 - *collider:* common effect of two causes. In DAGs where two arrows collide. Thus if you condition on this collider, there can be an association between these two causes even though there is no causal relation between them. This is due to the fact that information circulates from one cause to the effect to the second cause. This leads to *selection bias*: association between A and Y even if A does not cause Y. NB: a common effect is not necessarily a collider: a common effect can be the effect of a collider. Selection bias also arises in this case if we condition on the effect of a collider.
 
