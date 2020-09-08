@@ -11,11 +11,11 @@
 -
   name: "About"
   icon: "fas fa-info"
-  # path: tabs
-  # url: about
+  path: tabs
+  url: about
 -
   name: "Research"
-  icon: "fas fa-align-justify"
+  icon: "fas fa-book-open"
   path: tabs
   url: research
 -
