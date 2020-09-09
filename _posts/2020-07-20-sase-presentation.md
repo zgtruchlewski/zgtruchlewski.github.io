@@ -1,7 +1,7 @@
 ---
 title: SASE Presentation: The Politics of Austerity
 author: Zbigniew Truchlewski
-date: 2020-07-20 10:34:00 +0000
+date: 2020-09-09 10:34:00 +0000
 categories: [Research]
 tags: [austerity]
 ---
