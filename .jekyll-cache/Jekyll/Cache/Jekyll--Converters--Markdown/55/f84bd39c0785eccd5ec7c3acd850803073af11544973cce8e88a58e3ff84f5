@@ -1,0 +1,53 @@
+I"D<div id="archives" class="pl-xl-2">
+
+  
+  
+  
+    
+    
+  <span class="lead">2020</span>
+  <ul class="list-unstyled">
+  
+    <li>
+      <div>
+        
+        
+        <span class="date day">09</span>
+        <span class="date month small text-muted">Sep</span>
+        <a href="/posts/presentation/">SASE Presentation</a>
+      </div>
+    </li>
+  
+
+  
+  
+  
+    <li>
+      <div>
+        
+        
+        <span class="date day">07</span>
+        <span class="date month small text-muted">Sep</span>
+        <a href="/posts/welcome/">Welcome!</a>
+      </div>
+    </li>
+  
+
+  
+  
+  
+    <li>
+      <div>
+        
+        
+        <span class="date day">07</span>
+        <span class="date month small text-muted">Sep</span>
+        <a href="/posts/stats-lexicon/">Statistical dictionary</a>
+      </div>
+    </li>
+  
+  </ul>
+  
+
+</div>
+:ET
