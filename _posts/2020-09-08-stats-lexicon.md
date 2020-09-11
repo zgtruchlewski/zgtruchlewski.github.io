@@ -28,7 +28,7 @@ I have not yet come across a statistical book with an accessible glossary. So I 
 
 <img src="https://zgtruchlewski.github.io/assets/img/sample/ZbigResearch.jpg" width="326" height="181" />
 
-<object data="https://zgtruchlewski.github.io/assets/img/sample/StargazingStata3.pdf" width="1000" height="1000" type='application/pdf'/>
+<object data="https://zgtruchlewski.github.io/assets/img/sample/StargazingStata3.pdf" width="396" height="288" type='application/pdf'/>
 
 <!-- These are the most important concepts we've seen in McElreath's book and in the course. Try to skim this through and see what sticks and what does not. Also, if you come by better definitions, please do send them to me!
 
