@@ -7,6 +7,7 @@ tags: [learning stats]
 toc: true
 math: true
 pin: true
+has-code: true
 ---
 
 [Under construction]
@@ -105,7 +106,7 @@ See Frank Harrel here: http://biostat.mc.vanderbilt.edu/wiki/Main/CourseBios330C
 
 The figure on statisitical vs. substantive significance can be replicated with the following Stata code:
 
-```stata
+```
 kdensity x1, gen(x_1 h_1)
 kdensity x2, gen(x_2 h_2)
 kdensity x3, gen(x_3 h_3)
