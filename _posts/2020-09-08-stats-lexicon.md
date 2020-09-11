@@ -9,11 +9,13 @@ math: true
 pin: true
 ---
 
+[Under construction]
+
 Many statistical terms are daunting. They can quickly become confusing. Even scholars themselves do not agree on what some mean. Try asking what a [p-value is at a conference](https://fivethirtyeight.com/features/not-even-scientists-can-easily-explain-p-values/) or, if you want to see academics practice kung-fu, ask them whether one should use fixed or random effects (safety not guaranteed). Sometimes, it is even hard to distinguish statistical concepts from expletives used by [Captain Haddock](https://en.wikipedia.org/wiki/Captain_Haddock#Expletives). 
 
-Strangely enough, I have not yet come across a statistical book with a glossary. So I hope this simple dictionary (a work-in-progress!) will help you (and me) to survive the life statistical. Let me know where I can improve it!
+I have not yet come across a statistical book with an accessible glossary. So I hope this simple dictionary (***very much a work-in-progress!***) will help you (and me) to survive the life statistical. Let me know where I can improve it!
 
-# Alphabetically:
+# Alphabetically
 
 * ***Berkson's paradox:***
 
@@ -91,3 +93,5 @@ See Frank Harrel here: http://biostat.mc.vanderbilt.edu/wiki/Main/CourseBios330C
 - *variance-covariance matrix:* 
 - *zero-inflated outcomes:* When the zeros in a distribution come from different distributions, that is: there are different processes at play of why zero may arise (either nothing happened or the process in question failed to get started). Thus we need a mixture model to model the two or more processes at play. See section 11.2 of McElreath's book and his example of monks not producing manuscripts any given day either because they did not finish it or because they are drunk.
  -->
+
+# Sources
