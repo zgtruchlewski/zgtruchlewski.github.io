@@ -26,7 +26,7 @@ I have not yet come across a statistical book with an accessible glossary. So I 
 
 * ***Significance:*** distinction between statistical and substantive
 
-<img src="https://zgtruchlewski.github.io/assets/img/sample/StargazingStata3.jpg" width="326" height="181" />
+<img src="https://zgtruchlewski.github.io/assets/img/sample/StargazingStata3.jpg" width="426" height="281" />
 
 <!-- These are the most important concepts we've seen in McElreath's book and in the course. Try to skim this through and see what sticks and what does not. Also, if you come by better definitions, please do send them to me!
 
@@ -99,3 +99,33 @@ See Frank Harrel here: http://biostat.mc.vanderbilt.edu/wiki/Main/CourseBios330C
  -->
 
 # Sources
+
+
+# Code
+
+The figure on statisitical vs. substantive significance can be replicated with the following Stata code:
+
+```
+kdensity x1, gen(x_1 h_1)
+kdensity x2, gen(x_2 h_2)
+kdensity x3, gen(x_3 h_3)
+
+twoway scatteri 0 0 4 0, c(l) msym(none) lpat(vshortdash) lcol(gs10) legend(off) yscale(r(0 5) nofextend noline) ylabel(, nolabel nogrid tlength(0)) xscale(r(-.75 2.25) nofextend) xtitle("`=ustrunescape("\u03B2\u0302")' coefficients with 95% CI", height(6)) ///
+|| line h_1 x_1, lcolor(red%50) lpat(dash) || area h_1 x_1 if x_1 > .2 - 1.96*.1 & x_1 < .2 + 1.96*.1, color(red%30) lcolor(red%5) xscale(r(-.75 2.25) nofextend) ///
+|| line h_2 x_2, lcolor(orange%50) lpat(dash) || area h_2 x_2 if x_2 > 1.4 - 1.96*.1 & x_2 < 1.4 + 1.96*.1, color(orange%30) lcolor(orange%5) ///
+|| line h_3 x_3 if x_3 <= 2.2 & x_3 >= -.7, lcolor(blue%50) lpat(dash) || area h_3 x_3 if x_3 > .8 - 1.96*.5 & x_3 < .8 + 1.96*.5, color(blue%30) lcolor(blue%5)  ///
+	legend(off) plotregion(margin(b = 0.1)) ///
+	text(4.5 -.8 "`=ustrunescape("\u03B2\u0302")' statistically significant?", color(gs10) placement(e)) ///
+	text(4.75 -.8 "`=ustrunescape("\u03B2\u0302")' substantively significant?", color(gs10) placement(e)) ///
+	text(4.5 .2 "Yes", color(red)) ///
+	text(4.75 .2 "No", color(red)) ///
+	text(1 .2 "Precision", color(red)) ///
+	text(4.5 .8 "No", color(blue)) ///
+	text(4.75 .8 "Yes", color(blue)) ///
+	text(0.5 .8 "Ooomph", color(blue)) ///
+	text(4.5 1.4 "Yes", color(orange)) ///
+	text(4.75 1.4 "Yes", color(orange)) ///
+	text(1 1.4 "Ooomph", color(orange)) ///
+	text(0.8 1.4 "& Precision", color(orange)) ///
+	graphregion(margin(small))
+``
