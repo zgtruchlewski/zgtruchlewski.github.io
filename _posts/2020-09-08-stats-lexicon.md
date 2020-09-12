@@ -128,5 +128,4 @@ twoway scatteri 0 0 4 0, c(l) msym(none) lpat(vshortdash) lcol(gs10) legend(off)
 	text(1 1.4 "Ooomph", color(orange)) ///
 	text(0.8 1.4 "& Precision", color(orange)) ///
 	graphregion(margin(small))
-
 ```
