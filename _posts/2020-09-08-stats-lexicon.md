@@ -14,6 +14,8 @@ Many statistical terms are daunting. They can quickly become confusing. Even sch
 
 I have not yet come across a statistical book with an accessible glossary. So I hope this simple dictionary (work-in-progress!) will help you (and me) to survive the life statistical. Let me know where I can improve it!
 
+<!-- https://sgfin.github.io/2019/06/19/Causal-Inference-Book-Glossary-and-Notes/ -->
+
 # Alphabetically
 
 * ***Berkson's paradox:***
