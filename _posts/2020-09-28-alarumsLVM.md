@@ -1,7 +1,7 @@
 ---
 title: Machiavelli in Brussels
 author: Zbigniew Truchlewski
-date: 2020-09-09 10:34:00 +0000
+date: 2020-09-28 10:34:00 +0000
 categories: [Research]
 tags: [luuk van middelaar,European integration,Machiavelli]
 ---
