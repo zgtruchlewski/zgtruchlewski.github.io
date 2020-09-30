@@ -11,4 +11,4 @@ I have held visiting fellowships at [Cornell University](https://government.corn
 
 CV available upon request
 
-<img src="https://zgtruchlewski.github.io/assets/img/sample/CV.jpg" width="326" height="181" />
+<img src="https://zgtruchlewski.github.io/assets/img/sample/CV.jpg" width="426" height="181" />
