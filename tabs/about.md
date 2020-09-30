@@ -9,6 +9,6 @@ Previously, I was a Swiss Government Excellence Scholar at the [University of Ge
 
 I have held visiting fellowships at [Cornell University](https://government.cornell.edu), the London School of Economics and the EUI and have worked at the [European Central Bank](https://www.ecb.europa.eu/home/html/index.en.html), the European Commission ([DG ECFIN](https://ec.europa.eu/info/departments/economic-and-financial-affairs)) and the OSCE. I graduated from the Sorbonne (BA), Sciences Po Paris (MA & MRes) and the College of Europe (MA).
 
-CV available upon request
+CV available upon request.
 
 <img src="https://zgtruchlewski.github.io/assets/img/sample/CV.jpg" width="426" height="181" />
