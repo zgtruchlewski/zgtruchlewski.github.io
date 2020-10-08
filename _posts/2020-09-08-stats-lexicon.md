@@ -12,7 +12,7 @@ has-code: true
 
 Many statistical terms are daunting. They can quickly become confusing. Even scholars themselves do not agree on what some mean. Try asking what a [p-value is at a conference](https://fivethirtyeight.com/features/not-even-scientists-can-easily-explain-p-values/) or, if you want to see academics practice kung-fu, ask them whether one should use fixed or random effects (safety not guaranteed). Sometimes, it is even hard to distinguish statistical concepts from expletives used by [Captain Haddock](https://en.wikipedia.org/wiki/Captain_Haddock#Expletives). Being a non-native speaker compounds these difficulties. For instance, what does significance mean? 
 
-I have not yet come across a statistical book with an accessible glossary. So I hope this simple dictionary (work-in-progress!) will help you (and me) to survive the life statistical. Let me know where I can improve it!
+I have not yet come across a statistical book with an accessible glossary. So I hope this simple dictionary (work-in-progress!) will help you (and me) to survive the life statistical. Let me know where I can improve it! Use this dictionary at your own peril.
 
 <!-- https://sgfin.github.io/2019/06/19/Causal-Inference-Book-Glossary-and-Notes/ -->
 
