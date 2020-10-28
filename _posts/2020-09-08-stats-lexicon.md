@@ -14,6 +14,14 @@ Many statistical terms are daunting. They can quickly become confusing. Even sch
 
 I have not yet come across a statistical book with an accessible glossary. So I hope this simple dictionary (work-in-progress!) will help you (and me) to survive the life statistical. Let me know where I can improve it! Use this dictionary at your own peril.
 
+Imai 2010 (focus on NDE - fn 3) vs. Balckwell (focus on CDE)
+
+For controlled direct effect, you can freedom to put values in T and Mediator. Also easier to estimate. See Blackwell. For Natural Direct Effect: need to find a particular value of the mediator.  
+
+total effectc an be nul but mechanism can have effect. Gelato example of Aki. 
+
+https://catalogofbias.org/biases/collider-bias/
+
 <!-- https://sgfin.github.io/2019/06/19/Causal-Inference-Book-Glossary-and-Notes/ -->
 
 # Alphabetically
