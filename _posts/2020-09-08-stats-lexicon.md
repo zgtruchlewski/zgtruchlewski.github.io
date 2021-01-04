@@ -24,7 +24,7 @@ total effectc an be nul but mechanism can have effect. Gelato example of Aki.
 
 “ The applied econometrician is like a farmer who notices that the yield is somewhat higher under trees where birds roost, and he uses this as evidence that bird droppings increase yields. However, when he presents this finding at the annual meeting of the American Ecological Association, another farmer in the audience objects that he used the same data but came up with the conclusion that moderate amounts of shade increase yields. A bright chap in the back of the room then observes that these two hypotheses are indistinguishable, given the available data. He mentions the phrase ”identification problem,” which, though no one knows quite what he means, is said with such authority that it is totally convincing.” ([Leamer, 1983], p. 31). -->
 
-https://catalogofbias.org/biases/collider-bias/
+<!-- https://catalogofbias.org/biases/collider-bias/ -->
 
 <!-- https://sgfin.github.io/2019/06/19/Causal-Inference-Book-Glossary-and-Notes/ -->
 
