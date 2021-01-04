@@ -135,28 +135,45 @@ See Frank Harrel here: http://biostat.mc.vanderbilt.edu/wiki/Main/CourseBios330C
 
 The figure on statisitical vs. substantive significance can be replicated with the following Stata code:
 
-```
+```R
+	# Plot 
+	plot(x2,y2, type="l", xlim=c(-1, 2), ylim=c(0, 5), lwd=1, axes=FALSE, xlab="",ylab="", xaxs="i", yaxs="i")
+		# # 95% CI shaded
+		x2p <- seq(1.2,1.6,length=1000)
+		y2p <- dnorm(x2p,mean=1.4, sd=.1)
+		polygon(c(1.2,x2p,1.6),c(0,y2p,0),col=col.alpha("gray",0.3), border=NA)
 
-kdensity x1, gen(x_1 h_1)
-kdensity x2, gen(x_2 h_2)
-kdensity x3, gen(x_3 h_3)
+	# What is the 95% confidence interval?
+	# pnorm(1.2,mean=1.4,sd=.1)-pnorm(1.6,mean=1.4,sd=.1) 
 
-twoway scatteri 0 0 4 0, c(l) msym(none) lpat(vshortdash) lcol(gs10) legend(off) yscale(r(0 5) nofextend noline) ylabel(, nolabel nogrid tlength(0)) xscale(r(-.75 2.25) nofextend) xtitle("`=ustrunescape("\u03B2\u0302")' coefficients with 95% CI", height(6)) ///
-|| line h_1 x_1, lcolor(red%50) lpat(dash) || area h_1 x_1 if x_1 > .2 - 1.96*.1 & x_1 < .2 + 1.96*.1, color(red%30) lcolor(red%5) xscale(r(-.75 2.25) nofextend) ///
-|| line h_2 x_2, lcolor(orange%50) lpat(dash) || area h_2 x_2 if x_2 > 1.4 - 1.96*.1 & x_2 < 1.4 + 1.96*.1, color(orange%30) lcolor(orange%5) ///
-|| line h_3 x_3 if x_3 <= 2.2 & x_3 >= -.7, lcolor(blue%50) lpat(dash) || area h_3 x_3 if x_3 > .8 - 1.96*.5 & x_3 < .8 + 1.96*.5, color(blue%30) lcolor(blue%5)  ///
-	legend(off) plotregion(margin(b = 0.1)) ///
-	text(4.5 -.8 "`=ustrunescape("\u03B2\u0302")' statistically significant?", color(gs10) placement(e)) ///
-	text(4.75 -.8 "`=ustrunescape("\u03B2\u0302")' substantively significant?", color(gs10) placement(e)) ///
-	text(4.5 .2 "Yes", color(red)) ///
-	text(4.75 .2 "No", color(red)) ///
-	text(1 .2 "Precision", color(red)) ///
-	text(4.5 .8 "No", color(blue)) ///
-	text(4.75 .8 "Yes", color(blue)) ///
-	text(0.5 .8 "Ooomph", color(blue)) ///
-	text(4.5 1.4 "Yes", color(orange)) ///
-	text(4.75 1.4 "Yes", color(orange)) ///
-	text(1 1.4 "Ooomph", color(orange)) ///
-	text(0.8 1.4 "& Precision", color(orange)) ///
-	graphregion(margin(small))
+	segments(0,-.2,0,4, lwd=2, col="gray60", lty=2)
+	lines(x1,y1, type="l", xlim=c(-1, 2), yaxt='n', lwd=1)
+		# # 95% CI shaded
+		x1p <- seq(0,.4,length=1000)
+		y1p <- dnorm(x1p,mean=0.2, sd=.1)
+		polygon(c(0,x1p,.4),c(0,y1p,0),col=col.alpha("gray",0.3), border=NA)
+
+	lines(x3,y3, type="l", xlim=c(-1, 2), yaxt='n', lwd=1)
+		# # 95% CI shaded
+		x3p <- seq(-.2,1.8,length=1000)
+		y3p <- dnorm(x3p,mean=0.8, sd=.5)
+		polygon(c(-.2,x3p,1.8),c(0,y3p,0),col=col.alpha("gray",0.3), border=NA)
+
+	axis(1, xlim=c(-1, 2), at= cbind(-1, -0.5, 0, .5, 1, 1.5, 2), labels=c("-2", "-1", "0", "1", "2", "3", "4"))
+
+	# Add text
+		text(-.775, 4.25, "Statistically significant?", col="gray45", cex=1.2, adj = c(0,0)) # col.alpha("gray45",0.4)
+		text(-.775, 4.5, "Substantively significant?", col="gray45", cex=1.2,adj = c(0,0))
+
+		text(.15, 4.25, "Yes", adj = c(0,0)) # col.alpha("red",0.4)
+		text(.15, 4.5, "No", adj = c(0,0))
+		text(.2, 1, "Precision", adj = c(0.5,0.5))
+
+		text(1.35, 4.25, "Yes", adj = c(0,0)) # col.alpha("orange",0.4)
+		text(1.35, 4.5, "Yes", adj = c(0,0))
+		text(1.4, 1, "Ooomph &\nprecision", adj = c(0.5,0.5))
+
+		text(0.75, 4.25, "No", adj = c(0,0)) # col.alpha("blue",0.4)
+		text(0.75, 4.5, "Yes", adj = c(0,0))
+		text(0.8, .5, "Ooomph", adj = c(0.5,0.5))
 ```
