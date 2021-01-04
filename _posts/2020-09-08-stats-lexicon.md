@@ -10,15 +10,19 @@ pin: true
 has-code: true
 ---
 
-Many statistical terms are daunting. They can quickly become confusing. Even scholars themselves do not agree on what some mean. Try asking what a [p-value is at a conference](https://fivethirtyeight.com/features/not-even-scientists-can-easily-explain-p-values/) or, if you want to see academics practice kung-fu, ask them whether one should use fixed or random effects (safety not guaranteed). Sometimes, it is even hard to distinguish statistical concepts from expletives used by [Captain Haddock](https://en.wikipedia.org/wiki/Captain_Haddock#Expletives). Being a non-native speaker compounds these difficulties. For instance, what does significance mean? 
+Many statistical terms are daunting. They can quickly become confusing. Even scholars themselves do not agree on what some mean. Try asking what a [p-value is at a conference](https://fivethirtyeight.com/features/not-even-scientists-can-easily-explain-p-values/) or, if you want to see academics practice kung-fu, ask them whether one should use fixed or random effects (safety not guaranteed). Many concepts sound alike and statistical learners end up feeling like reading a Russian novel: who is Alexandra Petrovna again? And what is her relation to Alexander Petrovitch? Sometimes, it is even hard to distinguish statistical concepts from expletives used by [Captain Haddock](https://en.wikipedia.org/wiki/Captain_Haddock#Expletives). Being a non-native speaker compounds these difficulties. For instance, what does "significant" mean? 
 
 I have not yet come across a statistical book with an accessible glossary. So I hope this simple dictionary (work-in-progress!) will help you (and me) to survive the life statistical. Let me know where I can improve it! Use this dictionary at your own peril.
+
+"“Unfortunately, I have yet to find a single person who can explain what ignorability means in a language spoken by those who need to make this assumption or assess its plausibility in a given problem.” (The book of Why, p. 281)."
 
 Imai 2010 (focus on NDE - fn 3) vs. Balckwell (focus on CDE)
 
 For controlled direct effect, you can freedom to put values in T and Mediator. Also easier to estimate. See Blackwell. For Natural Direct Effect: need to find a particular value of the mediator.  
 
 total effectc an be nul but mechanism can have effect. Gelato example of Aki. 
+
+“ The applied econometrician is like a farmer who notices that the yield is somewhat higher under trees where birds roost, and he uses this as evidence that bird droppings increase yields. However, when he presents this finding at the annual meeting of the American Ecological Association, another farmer in the audience objects that he used the same data but came up with the conclusion that moderate amounts of shade increase yields. A bright chap in the back of the room then observes that these two hypotheses are indistinguishable, given the available data. He mentions the phrase ”identification problem,” which, though no one knows quite what he means, is said with such authority that it is totally convincing.” ([Leamer, 1983], p. 31).
 
 https://catalogofbias.org/biases/collider-bias/
 
@@ -33,15 +37,26 @@ https://catalogofbias.org/biases/collider-bias/
 * ***Collider:*** common effect of two causes. In DAGs where two arrows collide. Thus if you condition on this collider, there can be an association between these two causes even though there is no causal relation between them. This is due to the fact that information circulates from one cause to the effect to the second cause. 
 	- This leads to *selection bias*: association between A and Y even if A does not cause Y. NB: a common effect is not necessarily a collider: a common effect can be the effect of a collider. Selection bias also arises in this case if we condition on the effect of a collider.
 
+* ***Fitting:*** REWRITE, from Sololon Kurz: 	Two contrasting kinds of statistical error:
+    - overfitting, “which leads to poor prediction by learning too much from the data”
+    - underfitting, “which leads to poor prediction by learning too little from the data” (p. 166, emphasis added)
+
+
 * ***Probability:*** Does probability exist? If yes, what is it? It's surprising to learn that there is no agreement on this. Some people like Bruno de Finetti claimed that probability does not exist - at least not objectively. It's in the eye of the beholder: many people have different probabilities of an event depending on their state of knowledge. Others defined probability base on notions such as a set of events (Kolmogorov), a long run frequency (Venn), or based on all possible outcomes of an experiment (Gosset). 
 	- Seel also: The Lady Tasting Tea, Ch. 29. 
+
+* ***Sensitivity analysis:*** Usual done in several ways: 1/ Show how estimates change as we add controsl. Why this is bad? 2/ Fom Imai et al 2011 p. 774 L: Sensitivity analysis provides one way to do this. The goal of a sensitivity analysis is to quantify the exact de- gree to which the key identification assumption must be violated for a researcher’s original conclusion to be re- versed. If inference is sensitive, a slight violation of the assumption may lead to substantively different conclu- sions. Although sensitivity analyses are not currently a routine part of statistical practice in political science (but see Blattman 2009, and Imai and Yamamoto 2010), we would argue that they should form an indispensable part of empirical research (Rosenbaum, 2002b).
+
+Several schools: Stability of Coefficinet visual or table-based (classic, Traunmeuller? Adolph), Bounds (Leamer, Young, Sala-i-Martin), and unobservable confounders (Blackwell, Oster). 
 
 * ***Significance:*** distinction between statistical and substantive
 	- See also: p-value
 
-<img src="https://zgtruchlewski.github.io/assets/img/sample/StargazingStata3.jpg" width="426" height="281" />
+<img src="https://zgtruchlewski.github.io/assets/img/sample/Stargazing_BW_Negative.png" width="426" height="281" />
 
 * ***sequential ignorability:*** 
+
+* ***sharp bound:*** partially identification of MAnski, mathematically guaranteed bound of ATE vs. Confidence Interval due to uncertainty of sample. 
 
 <!-- These are the most important concepts we've seen in McElreath's book and in the course. Try to skim this through and see what sticks and what does not. Also, if you come by better definitions, please do send them to me!
 
