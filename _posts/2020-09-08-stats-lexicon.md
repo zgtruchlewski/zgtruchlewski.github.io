@@ -150,7 +150,8 @@ y3 <- dnorm(x3,mean=0.8, sd=.5)
 segments(0,-.2,0,4, lwd=2, col="gray60", lty=2)
 
 # Densities
-plot(x2,y2, type="l", xlim=c(-1, 2), ylim=c(0, 5), lwd=1, axes=FALSE, xlab="",ylab="", xaxs="i", yaxs="i")
+plot(x2,y2, type="l", xlim=c(-1, 2), ylim=c(0, 5), lwd=1, axes=FALSE, 
+	xlab="",ylab="", xaxs="i", yaxs="i")
 	# # 95% CI shaded
 	x2p <- seq(1.2,1.6,length=1000)
 	y2p <- dnorm(x2p,mean=1.4, sd=.1)
@@ -168,7 +169,8 @@ lines(x3,y3, type="l", xlim=c(-1, 2), yaxt='n', lwd=1)
 	y3p <- dnorm(x3p,mean=0.8, sd=.5)
 	polygon(c(-.2,x3p,1.8),c(0,y3p,0),col=col.alpha("gray",0.3), border=NA)
 
-axis(1, xlim=c(-1, 2), at= cbind(-1, -0.5, 0, .5, 1, 1.5, 2), labels=c("-2", "-1", "0", "1", "2", "3", "4"))
+axis(1, xlim=c(-1, 2), at= cbind(-1, -0.5, 0, .5, 1, 1.5, 2), 
+	labels=c("-2", "-1", "0", "1", "2", "3", "4"))
 
 # Add text
 text(-.775, 4.25, "Statistically significant?")
