@@ -133,49 +133,56 @@ See Frank Harrel here: http://biostat.mc.vanderbilt.edu/wiki/Main/CourseBios330C
 
 # Code
 
-The figure on statisitical vs. substantive significance can be replicated with the following Stata code:
+The figure on statisitical vs. substantive significance can be replicated with the following R code:
 
 ```R
-	### Plot 
+### Data 
+x1 <- seq(-.2,.6,length=1000)
+y1 <- dnorm(x1,mean=.2, sd=.1)
+x2 <- seq(1,1.8,length=1000)
+y2 <- dnorm(x2,mean=1.4, sd=.1)
+x3 <- seq(-1,2,length=1000)
+y3 <- dnorm(x3,mean=0.8, sd=.5)
 
-	# Zero line
-	segments(0,-.2,0,4, lwd=2, col="gray60", lty=2)
+### Plot 
 
-	# Densities
-	plot(x2,y2, type="l", xlim=c(-1, 2), ylim=c(0, 5), lwd=1, axes=FALSE, xlab="",ylab="", xaxs="i", yaxs="i")
-		# # 95% CI shaded
-		x2p <- seq(1.2,1.6,length=1000)
-		y2p <- dnorm(x2p,mean=1.4, sd=.1)
-		polygon(c(1.2,x2p,1.6),c(0,y2p,0),col=col.alpha("gray",0.3), border=NA)
+# Zero line
+segments(0,-.2,0,4, lwd=2, col="gray60", lty=2)
 
-	
-	lines(x1,y1, type="l", xlim=c(-1, 2), yaxt='n', lwd=1)
-		# # 95% CI shaded
-		x1p <- seq(0,.4,length=1000)
-		y1p <- dnorm(x1p,mean=0.2, sd=.1)
-		polygon(c(0,x1p,.4),c(0,y1p,0),col=col.alpha("gray",0.3), border=NA)
+# Densities
+plot(x2,y2, type="l", xlim=c(-1, 2), ylim=c(0, 5), lwd=1, axes=FALSE, xlab="",ylab="", xaxs="i", yaxs="i")
+	# # 95% CI shaded
+	x2p <- seq(1.2,1.6,length=1000)
+	y2p <- dnorm(x2p,mean=1.4, sd=.1)
+	polygon(c(1.2,x2p,1.6),c(0,y2p,0),col=col.alpha("gray",0.3), border=NA)
 
-	lines(x3,y3, type="l", xlim=c(-1, 2), yaxt='n', lwd=1)
-		# # 95% CI shaded
-		x3p <- seq(-.2,1.8,length=1000)
-		y3p <- dnorm(x3p,mean=0.8, sd=.5)
-		polygon(c(-.2,x3p,1.8),c(0,y3p,0),col=col.alpha("gray",0.3), border=NA)
+lines(x1,y1, type="l", xlim=c(-1, 2), yaxt='n', lwd=1)
+	# # 95% CI shaded
+	x1p <- seq(0,.4,length=1000)
+	y1p <- dnorm(x1p,mean=0.2, sd=.1)
+	polygon(c(0,x1p,.4),c(0,y1p,0),col=col.alpha("gray",0.3), border=NA)
 
-	axis(1, xlim=c(-1, 2), at= cbind(-1, -0.5, 0, .5, 1, 1.5, 2), labels=c("-2", "-1", "0", "1", "2", "3", "4"))
+lines(x3,y3, type="l", xlim=c(-1, 2), yaxt='n', lwd=1)
+	# # 95% CI shaded
+	x3p <- seq(-.2,1.8,length=1000)
+	y3p <- dnorm(x3p,mean=0.8, sd=.5)
+	polygon(c(-.2,x3p,1.8),c(0,y3p,0),col=col.alpha("gray",0.3), border=NA)
 
-	# Add text
-	text(-.775, 4.25, "Statistically significant?")
-	text(-.775, 4.5, "Substantively significant?")
+axis(1, xlim=c(-1, 2), at= cbind(-1, -0.5, 0, .5, 1, 1.5, 2), labels=c("-2", "-1", "0", "1", "2", "3", "4"))
 
-	text(.15, 4.25, "Yes") 
-	text(.15, 4.5, "No")
-	text(.2, 1, "Precision")
+# Add text
+text(-.775, 4.25, "Statistically significant?")
+text(-.775, 4.5, "Substantively significant?")
 
-	text(1.35, 4.25, "Yes") 
-	text(1.35, 4.5, "Yes")
-	text(1.4, 1, "Ooomph &\nprecision")
+text(.15, 4.25, "Yes") 
+text(.15, 4.5, "No")
+text(.2, 1, "Precision")
 
-	text(0.75, 4.25, "No") 
-	text(0.75, 4.5, "Yes")
-	text(0.8, .5, "Ooomph")
+text(1.35, 4.25, "Yes") 
+text(1.35, 4.5, "Yes")
+text(1.4, 1, "Ooomph &\nprecision")
+
+text(0.75, 4.25, "No") 
+text(0.75, 4.5, "Yes")
+text(0.8, .5, "Ooomph")
 ```
