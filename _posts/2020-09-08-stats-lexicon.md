@@ -136,17 +136,19 @@ See Frank Harrel here: http://biostat.mc.vanderbilt.edu/wiki/Main/CourseBios330C
 The figure on statisitical vs. substantive significance can be replicated with the following Stata code:
 
 ```R
-	# Plot 
+	### Plot 
+
+	# Zero line
+	segments(0,-.2,0,4, lwd=2, col="gray60", lty=2)
+
+	# Densities
 	plot(x2,y2, type="l", xlim=c(-1, 2), ylim=c(0, 5), lwd=1, axes=FALSE, xlab="",ylab="", xaxs="i", yaxs="i")
 		# # 95% CI shaded
 		x2p <- seq(1.2,1.6,length=1000)
 		y2p <- dnorm(x2p,mean=1.4, sd=.1)
 		polygon(c(1.2,x2p,1.6),c(0,y2p,0),col=col.alpha("gray",0.3), border=NA)
 
-	# What is the 95% confidence interval?
-	# pnorm(1.2,mean=1.4,sd=.1)-pnorm(1.6,mean=1.4,sd=.1) 
-
-	segments(0,-.2,0,4, lwd=2, col="gray60", lty=2)
+	
 	lines(x1,y1, type="l", xlim=c(-1, 2), yaxt='n', lwd=1)
 		# # 95% CI shaded
 		x1p <- seq(0,.4,length=1000)
@@ -162,18 +164,18 @@ The figure on statisitical vs. substantive significance can be replicated with t
 	axis(1, xlim=c(-1, 2), at= cbind(-1, -0.5, 0, .5, 1, 1.5, 2), labels=c("-2", "-1", "0", "1", "2", "3", "4"))
 
 	# Add text
-		text(-.775, 4.25, "Statistically significant?", col="gray45", cex=1.2, adj = c(0,0)) # col.alpha("gray45",0.4)
-		text(-.775, 4.5, "Substantively significant?", col="gray45", cex=1.2,adj = c(0,0))
+	text(-.775, 4.25, "Statistically significant?")
+	text(-.775, 4.5, "Substantively significant?")
 
-		text(.15, 4.25, "Yes", adj = c(0,0)) # col.alpha("red",0.4)
-		text(.15, 4.5, "No", adj = c(0,0))
-		text(.2, 1, "Precision", adj = c(0.5,0.5))
+	text(.15, 4.25, "Yes") 
+	text(.15, 4.5, "No")
+	text(.2, 1, "Precision")
 
-		text(1.35, 4.25, "Yes", adj = c(0,0)) # col.alpha("orange",0.4)
-		text(1.35, 4.5, "Yes", adj = c(0,0))
-		text(1.4, 1, "Ooomph &\nprecision", adj = c(0.5,0.5))
+	text(1.35, 4.25, "Yes") 
+	text(1.35, 4.5, "Yes")
+	text(1.4, 1, "Ooomph &\nprecision")
 
-		text(0.75, 4.25, "No", adj = c(0,0)) # col.alpha("blue",0.4)
-		text(0.75, 4.5, "Yes", adj = c(0,0))
-		text(0.8, .5, "Ooomph", adj = c(0.5,0.5))
+	text(0.75, 4.25, "No") 
+	text(0.75, 4.5, "Yes")
+	text(0.8, .5, "Ooomph")
 ```
