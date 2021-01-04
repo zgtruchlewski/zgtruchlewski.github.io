@@ -14,7 +14,7 @@ Many statistical terms are daunting. They can quickly become confusing. Even sch
 
 I have not yet come across a statistical book with an accessible glossary. So I hope this simple dictionary (work-in-progress!) will help you (and me) to survive the life statistical. Let me know where I can improve it! Use this dictionary at your own peril.
 
-"“Unfortunately, I have yet to find a single person who can explain what ignorability means in a language spoken by those who need to make this assumption or assess its plausibility in a given problem.” (The book of Why, p. 281)."
+<!-- "“Unfortunately, I have yet to find a single person who can explain what ignorability means in a language spoken by those who need to make this assumption or assess its plausibility in a given problem.” (The book of Why, p. 281)."
 
 Imai 2010 (focus on NDE - fn 3) vs. Balckwell (focus on CDE)
 
@@ -22,7 +22,7 @@ For controlled direct effect, you can freedom to put values in T and Mediator. A
 
 total effectc an be nul but mechanism can have effect. Gelato example of Aki. 
 
-“ The applied econometrician is like a farmer who notices that the yield is somewhat higher under trees where birds roost, and he uses this as evidence that bird droppings increase yields. However, when he presents this finding at the annual meeting of the American Ecological Association, another farmer in the audience objects that he used the same data but came up with the conclusion that moderate amounts of shade increase yields. A bright chap in the back of the room then observes that these two hypotheses are indistinguishable, given the available data. He mentions the phrase ”identification problem,” which, though no one knows quite what he means, is said with such authority that it is totally convincing.” ([Leamer, 1983], p. 31).
+“ The applied econometrician is like a farmer who notices that the yield is somewhat higher under trees where birds roost, and he uses this as evidence that bird droppings increase yields. However, when he presents this finding at the annual meeting of the American Ecological Association, another farmer in the audience objects that he used the same data but came up with the conclusion that moderate amounts of shade increase yields. A bright chap in the back of the room then observes that these two hypotheses are indistinguishable, given the available data. He mentions the phrase ”identification problem,” which, though no one knows quite what he means, is said with such authority that it is totally convincing.” ([Leamer, 1983], p. 31). -->
 
 https://catalogofbias.org/biases/collider-bias/
 
