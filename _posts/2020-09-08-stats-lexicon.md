@@ -36,7 +36,7 @@ total effectc an be nul but mechanism can have effect. Gelato example of Aki.
 
 * ***Collider:*** common effect of two causes. In DAGs where two arrows collide. Thus if you condition on this collider, there can be an association between these two causes even though there is no causal relation between them. This is due to the fact that information circulates from one cause to the effect to the second cause. 
 	- This leads to *selection bias*: association between A and Y even if A does not cause Y. NB: a common effect is not necessarily a collider: a common effect can be the effect of a collider. Selection bias also arises in this case if we condition on the effect of a collider.
-	- [Example](https://www.youtube.com/watch?v=l_7yIUqWBmE&feature=youtu.be): light switch, electricity and light. If you see light is on, and switch is on, then you automatically learn that there is electricitiy. If there is electricity, and there is no light, you automatically deduce that the switch if off (draw DAG below, link to McElreath).[^DAG]
+	- [Example](https://www.youtube.com/watch?v=l_7yIUqWBmE&feature=youtu.be): light switch, electricity and light. If you see light is on, and switch is on, then you automatically learn that there is electricitiy. If there is electricity, and there is no light, you automatically deduce that the switch if off (draw DAG below, link to McElreath).[####DAG]
 
 
 * ***DAG (directed acyclic graph):***
@@ -54,7 +54,7 @@ total effectc an be nul but mechanism can have effect. Gelato example of Aki.
 Several schools: Stability of Coefficinet visual or table-based (classic, Traunmeuller? Adolph), Bounds (Leamer, Young, Sala-i-Martin), and unobservable confounders (Blackwell, Oster). 
 
 * ***Significance:*** distinction between statistical and substantive
-	- See also: p-value
+	- See also: p-value. [####Significance]
 
 <img src="https://zgtruchlewski.github.io/assets/img/sample/Stargazing_BW_Negative.png" width="426" height="281" />
 
@@ -137,13 +137,13 @@ See Frank Harrel here: http://biostat.mc.vanderbilt.edu/wiki/Main/CourseBios330C
 
 # Code
 
-[^DAG]: Link for the DAG code
+[####DAG]: Link for the DAG code
 
 ```R
 library(dagitty)
 ```
 
-The figure on statisitical vs. substantive significance can be replicated with the following `R` code:
+[####Significance]: The figure on statisitical vs. substantive significance can be replicated with the following `R` code:
 
 ```R
 ### Data 
