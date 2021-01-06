@@ -36,7 +36,7 @@ total effectc an be nul but mechanism can have effect. Gelato example of Aki.
 
 * ***Collider:*** common effect of two causes. In DAGs where two arrows collide. Thus if you condition on this collider, there can be an association between these two causes even though there is no causal relation between them. This is due to the fact that information circulates from one cause to the effect to the second cause. 
 	- This leads to *selection bias*: association between A and Y even if A does not cause Y. NB: a common effect is not necessarily a collider: a common effect can be the effect of a collider. Selection bias also arises in this case if we condition on the effect of a collider.
-	- [Example](https://www.youtube.com/watch?v=l_7yIUqWBmE&feature=youtu.be): light switch, electricity and light. If you see light is on, and switch is on, then you automatically learn that there is electricitiy. If there is electricity, and there is no light, you automatically deduce that the switch if off (draw DAG below, link to McElreath).[####DAG]
+	- [Example](https://www.youtube.com/watch?v=l_7yIUqWBmE&feature=youtu.be): light switch, electricity and light. If you see light is on, and switch is on, then you automatically learn that there is electricitiy. If there is electricity, and there is no light, you automatically deduce that the switch if off (draw DAG below, link to McElreath).[DAG](#DAG) 
 
 
 * ***DAG (directed acyclic graph):***
@@ -136,6 +136,63 @@ See Frank Harrel here: http://biostat.mc.vanderbilt.edu/wiki/Main/CourseBios330C
 
 
 # Code
+
+## Code block
+
+### Common
+
+```
+This is a common code snippet, without syntax highlight and line number.
+```
+
+### Specific Languages
+
+#### Console
+
+```console
+$ env |grep SHELL
+SHELL=/usr/local/bin/bash
+PYENV_SHELL=bash
+```
+
+#### Ruby
+
+```ruby
+def sum_eq_n?(arr, n)
+  return true if arr.empty? && n == 0
+  arr.product(arr).reject { |a,b| a == b }.any? { |a,b| a + b == n }
+end
+```
+
+#### Shell
+
+```shell
+if [ $? -ne 0 ]; then
+    echo "The command was not successful.";
+    #do the needful / exit
+fi;
+```
+
+#### Liquid
+
+{% raw %}
+```liquid
+{% if product.title contains 'Pack' %}
+  This product's title contains the word Pack.
+{% endif %}
+```
+{% endraw %}
+
+#### Java
+
+```java
+private void writeObject(java.io.ObjectOutputStream s)
+  throws java.io.IOException {
+  // Write out any hidden serialization magic
+  s.defaultWriteObject();
+  for (E e: map.keySet()) s.writeObject(e);
+}
+```
 
 Link for the DAG code
 
