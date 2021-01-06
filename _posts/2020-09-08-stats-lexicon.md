@@ -137,13 +137,13 @@ See Frank Harrel here: http://biostat.mc.vanderbilt.edu/wiki/Main/CourseBios330C
 
 # Code
 
-[####DAG]: Link for the DAG code
+Link for the DAG code
 
 ```R
 library(dagitty)
 ```
 
-[####Significance]: The figure on statisitical vs. substantive significance can be replicated with the following `R` code:
+The figure on statisitical vs. substantive significance can be replicated with the following `R` code:
 
 ```R
 ### Data 
