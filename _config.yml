@@ -26,14 +26,14 @@ github:
   username: zgtruchlewski             # change to your github username
 
 twitter:
-  username:             # change to your twitter username
+  username: @ZTruchlewski           # change to your twitter username
 
 social:
   name: Zbigniew Truchlewski                  # it will shows as the copyright owner in Footer
   email: z.g.truchlewski@lse.ac.uk             # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    #- https://twitter.com/username      # change to your twitter homepage
+    - https://twitter.com/ZTruchlewski      # change to your twitter homepage
     - https://github.com/zgtruchlewski       # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
