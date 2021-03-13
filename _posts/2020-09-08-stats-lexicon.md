@@ -32,6 +32,8 @@ total effectc an be nul but mechanism can have effect. Gelato example of Aki.
 
 * ***Berkson's paradox:***
 
+* ***Bias:*** See [here](https://catalogofbias.org/biases/)
+
 * ***Bias-variance trade-off:***
 
 * ***Collider:*** common effect of two causes. In DAGs where two arrows collide. Thus if you condition on this collider, there can be an association between these two causes even though there is no causal relation between them. This is due to the fact that information circulates from one cause to the effect to the second cause. 
@@ -48,6 +50,8 @@ total effectc an be nul but mechanism can have effect. Gelato example of Aki.
 
 * ***Probability:*** Does probability exist? If yes, what is it? It's surprising to learn that there is no agreement on this. Some people like Bruno de Finetti claimed that probability does not exist - at least not objectively. It's in the eye of the beholder: many people have different probabilities of an event depending on their state of knowledge. Others defined probability base on notions such as a set of events (Kolmogorov), a long run frequency (Venn), or based on all possible outcomes of an experiment (Gosset). 
 	- Seel also: The Lady Tasting Tea, Ch. 29. 
+
+* ***p-value:*** See [here](https://statsepi.substack.com/p/no-you-cant-explain-what-a-p-value)
 
 * ***Sensitivity analysis:*** Usual done in several ways: 1/ Show how estimates change as we add controsl. Why this is bad? 2/ Fom Imai et al 2011 p. 774 L: Sensitivity analysis provides one way to do this. The goal of a sensitivity analysis is to quantify the exact de- gree to which the key identification assumption must be violated for a researcher’s original conclusion to be re- versed. If inference is sensitive, a slight violation of the assumption may lead to substantively different conclu- sions. Although sensitivity analyses are not currently a routine part of statistical practice in political science (but see Blattman 2009, and Imai and Yamamoto 2010), we would argue that they should form an indispensable part of empirical research (Rosenbaum, 2002b).
 
