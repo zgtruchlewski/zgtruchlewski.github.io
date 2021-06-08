@@ -30,6 +30,8 @@ total effectc an be nul but mechanism can have effect. Gelato example of Aki.
 
 # Alphabetically
 
+DISTRIBUTIONS FROM BEN LAMBERT, CH. 8. 
+
 * ***Berkson's paradox:***
 
 * ***Bias:*** See [here](https://catalogofbias.org/biases/)
@@ -43,15 +45,22 @@ total effectc an be nul but mechanism can have effect. Gelato example of Aki.
 
 * ***DAG (directed acyclic graph):***
 
+* ***Dendogram:*** a dendrogram is a hierarchical tree that predicts the possible community partitions. Used mostly in cluster analysis. In network analysis can be used to identify communities (Barabasi 2016). <!-- "We can use a dendrogram to extract the underlying community organization. The dendrogram visualizes the order in which the nodes are assigned to specific communities. To identify the communities we must cut the dendrogram. Hierarchical clustering does not tell us where that cut should be. Using for example the cut indicated as a dashed line in Figure 9.9b, we recover the three obvious communities (ABC, EFG, and HIJK)." -->
+
 * ***Fitting:*** REWRITE, from Sololon Kurz: 	Two contrasting kinds of statistical error:
     - overfitting, “which leads to poor prediction by learning too much from the data”
     - underfitting, “which leads to poor prediction by learning too little from the data” (p. 166, emphasis added)
 
+* ***Hierarchical model:*** also called "multilevel models". 
+
+* ***Likelihood:*** In Bayesian statistics, the probability model. In Bayes' formula, p(data|theta). More simply, likelihood is a probability distribution. Difference between likelihood and probability: in Bayes we used the word likelihood because the data is fixed (Lambert 4.4). Likelihood does not necessarily sum up to one, while probability does.
 
 * ***Probability:*** Does probability exist? If yes, what is it? It's surprising to learn that there is no agreement on this. Some people like Bruno de Finetti claimed that probability does not exist - at least not objectively. It's in the eye of the beholder: many people have different probabilities of an event depending on their state of knowledge. Others defined probability base on notions such as a set of events (Kolmogorov), a long run frequency (Venn), or based on all possible outcomes of an experiment (Gosset). 
 	- Seel also: The Lady Tasting Tea, Ch. 29. 
 
 * ***p-value:*** See [here](https://statsepi.substack.com/p/no-you-cant-explain-what-a-p-value)
+
+* ***random sample:*** “Combining these two assumptions, we say in statistical language that our data sample is composed of independent and identically distributed observations, or alternatively we say that we have a random sample.” Excerpt From: Ben Lambert. “A Student’s Guide to Bayesian Statistics”. Apple Books. 
 
 * ***Sensitivity analysis:*** Usual done in several ways: 1/ Show how estimates change as we add controsl. Why this is bad? 2/ Fom Imai et al 2011 p. 774 L: Sensitivity analysis provides one way to do this. The goal of a sensitivity analysis is to quantify the exact de- gree to which the key identification assumption must be violated for a researcher’s original conclusion to be re- versed. If inference is sensitive, a slight violation of the assumption may lead to substantively different conclu- sions. Although sensitivity analyses are not currently a routine part of statistical practice in political science (but see Blattman 2009, and Imai and Yamamoto 2010), we would argue that they should form an indispensable part of empirical research (Rosenbaum, 2002b).
 
@@ -62,9 +71,9 @@ Several schools: Stability of Coefficinet visual or table-based (classic, Traunm
 
 <img src="https://zgtruchlewski.github.io/assets/img/sample/Stargazing_BW_Negative.png" width="426" height="281" />
 
-* ***sequential ignorability:*** 
+* ***Sequential ignorability:*** 
 
-* ***sharp bound:*** partially identification of MAnski, mathematically guaranteed bound of ATE vs. Confidence Interval due to uncertainty of sample. 
+* ***Sharp bound:*** partially identification of MAnski, mathematically guaranteed bound of ATE vs. Confidence Interval due to uncertainty of sample. 
 
 <!-- These are the most important concepts we've seen in McElreath's book and in the course. Try to skim this through and see what sticks and what does not. Also, if you come by better definitions, please do send them to me!
 
