@@ -1,4 +1,4 @@
-I"D�<p>Many statistical terms are daunting. They can quickly become confusing. Even scholars themselves do not agree on what some mean. Try asking what a <a href="https://fivethirtyeight.com/features/not-even-scientists-can-easily-explain-p-values/">p-value is at a conference</a> or, if you want to see academics practice kung-fu, ask them whether one should use fixed or random effects (safety not guaranteed). Many concepts sound alike and statistical learners end up feeling like reading a Russian novel: who is Alexandra Petrovna again? And what is her relation to Peter Alexandrovitch? Sometimes, it is even hard to distinguish statistical concepts from expletives used by <a href="https://en.wikipedia.org/wiki/Captain_Haddock#Expletives">Captain Haddock</a>. Being a non-native speaker compounds these difficulties. For instance, what does “significant” mean?</p>
+I"�<p>Many statistical terms are daunting. They can quickly become confusing. Even scholars themselves do not agree on what some mean. Try asking what a <a href="https://fivethirtyeight.com/features/not-even-scientists-can-easily-explain-p-values/">p-value is at a conference</a> or, if you want to see academics practice kung-fu, ask them whether one should use fixed or random effects (safety not guaranteed). Many concepts sound alike and statistical learners end up feeling like reading a Russian novel: who is Alexandra Petrovna again? And what is her relation to Peter Alexandrovitch? Sometimes, it is even hard to distinguish statistical concepts from expletives used by <a href="https://en.wikipedia.org/wiki/Captain_Haddock#Expletives">Captain Haddock</a>. Being a non-native speaker compounds these difficulties. For instance, what does “significant” mean?</p>
 
 <p>I have not yet come across a statistical book with an accessible glossary. So I hope this simple dictionary (work-in-progress!) will help you (and me) to survive the life statistical. Let me know where I can improve it! Use this dictionary at your own peril.</p>
 
@@ -18,9 +18,14 @@ total effectc an be nul but mechanism can have effect. Gelato example of Aki.
 
 <h1 id="alphabetically">Alphabetically</h1>
 
+<p>DISTRIBUTIONS FROM BEN LAMBERT, CH. 8.</p>
+
 <ul>
   <li>
     <p><strong><em>Berkson’s paradox:</em></strong></p>
+  </li>
+  <li>
+    <p><strong><em>Bias:</em></strong> See <a href="https://catalogofbias.org/biases/">here</a></p>
   </li>
   <li>
     <p><strong><em>Bias-variance trade-off:</em></strong></p>
@@ -34,16 +39,38 @@ total effectc an be nul but mechanism can have effect. Gelato example of Aki.
   <li>
     <p><strong><em>DAG (directed acyclic graph):</em></strong></p>
   </li>
+  <li>
+    <p><strong><em>Dendogram:</em></strong> a dendrogram is a hierarchical tree that predicts the possible community partitions. Used mostly in cluster analysis. In network analysis can be used to identify communities (Barabasi 2016). <!-- "We can use a dendrogram to extract the underlying community organization. The dendrogram visualizes the order in which the nodes are assigned to specific communities. To identify the communities we must cut the dendrogram. Hierarchical clustering does not tell us where that cut should be. Using for example the cut indicated as a dashed line in Figure 9.9b, we recover the three obvious communities (ABC, EFG, and HIJK)." --></p>
+  </li>
   <li><strong><em>Fitting:</em></strong> REWRITE, from Sololon Kurz: 	Two contrasting kinds of statistical error:
     <ul>
       <li>overfitting, “which leads to poor prediction by learning too much from the data”</li>
       <li>underfitting, “which leads to poor prediction by learning too little from the data” (p. 166, emphasis added)</li>
     </ul>
   </li>
+  <li>
+    <p><strong><em>Hierarchical model:</em></strong> also called “multilevel models”.</p>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td><strong><em>Likelihood:</em></strong> In Bayesian statistics, the probability model. In Bayes’ formula, p(data</td>
+          <td>theta). More simply, likelihood is a probability distribution. Difference between likelihood and probability: in Bayes we used the word likelihood because the data is fixed (Lambert 4.4). Likelihood does not necessarily sum up to one, while probability does.</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
   <li><strong><em>Probability:</em></strong> Does probability exist? If yes, what is it? It’s surprising to learn that there is no agreement on this. Some people like Bruno de Finetti claimed that probability does not exist - at least not objectively. It’s in the eye of the beholder: many people have different probabilities of an event depending on their state of knowledge. Others defined probability base on notions such as a set of events (Kolmogorov), a long run frequency (Venn), or based on all possible outcomes of an experiment (Gosset).
     <ul>
       <li>Seel also: The Lady Tasting Tea, Ch. 29.</li>
     </ul>
+  </li>
+  <li>
+    <p><strong><em>p-value:</em></strong> See <a href="https://statsepi.substack.com/p/no-you-cant-explain-what-a-p-value">here</a></p>
+  </li>
+  <li>
+    <p><strong><em>random sample:</em></strong> “Combining these two assumptions, we say in statistical language that our data sample is composed of independent and identically distributed observations, or alternatively we say that we have a random sample.” Excerpt From: Ben Lambert. “A Student’s Guide to Bayesian Statistics”. Apple Books.</p>
   </li>
   <li><strong><em>Sensitivity analysis:</em></strong> Usual done in several ways: 1/ Show how estimates change as we add controsl. Why this is bad? 2/ Fom Imai et al 2011 p. 774 L: Sensitivity analysis provides one way to do this. The goal of a sensitivity analysis is to quantify the exact de- gree to which the key identification assumption must be violated for a researcher’s original conclusion to be re- versed. If inference is sensitive, a slight violation of the assumption may lead to substantively different conclu- sions. Although sensitivity analyses are not currently a routine part of statistical practice in political science (but see Blattman 2009, and Imai and Yamamoto 2010), we would argue that they should form an indispensable part of empirical research (Rosenbaum, 2002b).</li>
 </ul>
@@ -62,10 +89,10 @@ total effectc an be nul but mechanism can have effect. Gelato example of Aki.
 
 <ul>
   <li>
-    <p><strong><em>sequential ignorability:</em></strong></p>
+    <p><strong><em>Sequential ignorability:</em></strong></p>
   </li>
   <li>
-    <p><strong><em>sharp bound:</em></strong> partially identification of MAnski, mathematically guaranteed bound of ATE vs. Confidence Interval due to uncertainty of sample.</p>
+    <p><strong><em>Sharp bound:</em></strong> partially identification of MAnski, mathematically guaranteed bound of ATE vs. Confidence Interval due to uncertainty of sample.</p>
   </li>
 </ul>
 
