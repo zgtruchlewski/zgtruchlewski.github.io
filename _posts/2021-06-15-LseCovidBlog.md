@@ -8,8 +8,6 @@ tags: [emergency politics,european integration,democracy,crisis politics,COVID 1
 
 *This text, which I co-authored with [Waltraud Schelkle](https://www.lse.ac.uk/european-institute/people/Schelkle-Waltraud) and [Joe Ganderson](https://www.lse.ac.uk/european-institute/people/ganderson-joseph), first appeared in the [LSE COVID-19 Blog](https://blogs.lse.ac.uk/covid19/2021/06/08/bypassing-democracy-or-buying-time-for-democracies-the-eu-and-covid/) with all hyperlinks.*
 
-Lalala
-
 Over the past decade, a new literature has emerged that considers how emergency politics might be exploited by European policymakers. It depicts leaders and bureaucrats as engaged in a process of “crisisification”, scanning the horizon for the next emergency in which policy decisions can be pushed through by executive authority. Democratic deliberation is sidelined as supranational actors like the European Commission and the European Central Bank, and powerful states, exploit emergency situations to increase their power.
 
 Together, these accounts portray crises as shocks that call for rapid action, driven by ‘external demands rather than chosen normative priorities‘. Familiar appeals to TINA (‘there is no alternative’) are complemented by calls for urgency and the necessity of strict timetables, imposed from on high. The emergency politics playbook follows a regular script. But as Jonathan White argues, European leaders follow this road at their peril, as emergency politics is shadowed by a new wave of Euroscepticism.
