@@ -55,6 +55,9 @@ DISTRIBUTIONS FROM BEN LAMBERT, CH. 8.
 
 * ***Likelihood:*** In Bayesian statistics, the probability model. In Bayes' formula, p(data|theta). More simply, likelihood is a probability distribution. Difference between likelihood and probability: in Bayes we used the word likelihood because the data is fixed (Lambert 4.4). Likelihood does not necessarily sum up to one, while probability does.
 
+* ***Moments of sample:*** to fit the first two moments (the mean and the standard deviation, respectively) of the sample.
+	- See also: mean, standard deviation, skewness, kurtosis. 
+
 * ***Probability:*** Does probability exist? If yes, what is it? It's surprising to learn that there is no agreement on this. Some people like Bruno de Finetti claimed that probability does not exist - at least not objectively. It's in the eye of the beholder: many people have different probabilities of an event depending on their state of knowledge. Others defined probability base on notions such as a set of events (Kolmogorov), a long run frequency (Venn), or based on all possible outcomes of an experiment (Gosset). 
 	- Seel also: The Lady Tasting Tea, Ch. 29. 
 
@@ -74,6 +77,9 @@ Several schools: Stability of Coefficinet visual or table-based (classic, Traunm
 * ***Sequential ignorability:*** 
 
 * ***Sharp bound:*** partially identification of MAnski, mathematically guaranteed bound of ATE vs. Confidence Interval due to uncertainty of sample. 
+
+* ***Skewness:*** The skewness and kurtosis (skewness measures how symmetric a distribution is, and kurtosis quantifies how fat its tails are; these relate to the third and fourth moments of a distribution, respectively).”
+
 
 <!-- These are the most important concepts we've seen in McElreath's book and in the course. Try to skim this through and see what sticks and what does not. Also, if you come by better definitions, please do send them to me!
 
