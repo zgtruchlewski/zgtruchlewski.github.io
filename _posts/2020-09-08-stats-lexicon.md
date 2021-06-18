@@ -30,22 +30,28 @@ total effectc an be nul but mechanism can have effect. Gelato example of Aki.
 
 # Alphabetically
 
-DISTRIBUTIONS FROM BEN LAMBERT, CH. 8. 
+<!-- DISTRIBUTIONS FROM BEN LAMBERT, CH. 8. 
 
 * ***Berkson's paradox:***
 
 * ***Bias:*** See [here](https://catalogofbias.org/biases/)
 
-* ***Bias-variance trade-off:***
+* ***Bias-variance trade-off:*** -->
 
 * ***Collider:*** common effect of two causes. In DAGs where two arrows collide. Thus if you condition on this collider, there can be an association between these two causes even though there is no causal relation between them. This is due to the fact that information circulates from one cause to the effect to the second cause. 
-	- This leads to *selection bias*: association between A and Y even if A does not cause Y. NB: a common effect is not necessarily a collider: a common effect can be the effect of a collider. Selection bias also arises in this case if we condition on the effect of a collider.
-	- [Example](https://www.youtube.com/watch?v=l_7yIUqWBmE&feature=youtu.be): light switch, electricity and light. If you see light is on, and switch is on, then you automatically learn that there is electricitiy. If there is electricity, and there is no light, you automatically deduce that the switch if off (draw DAG below, link to McElreath).[DAG](#DAG) 
+	- <!-- This leads to *selection bias*: it looksassociation between A and Y even if A does not cause Y. NB: a common effect is not necessarily a collider: a common effect can be the effect of a collider. Selection bias also arises in this case if we condition on the effect of a collider. -->
+	- Example: imagine a light switch, which is our collider. You , electricity and light. If you see light is on, and switch is on, then you automatically learn that there is electricitiy. If there is electricity, and there is no light, you automatically deduce that the switch if off (draw DAG below, link to McElreath).
+	- See also: *selection bias*, *confounder*
+
+<img src="https://zgtruchlewski.github.io/assets/img/sample/Collider_bw.png" width="426" height="281" />
+
+* ***DAG (directed acyclic graph):*** DAGs help to describe relationships between variables 
 
 
-* ***DAG (directed acyclic graph):***
+Graph means it is nodes and con- nections. Directed means the connections have arrows that indicate directions of causal in- fluence. And acyclic means that causes do not eventually flow back on themselves. A DAG is a way of describing qualitative causal relationships among variables. It isn’t as detailed as a full model description, but it contains information that a purely statistical model does not. Unlike a statistical model, a DAG will tell you the consequences of intervening to change a variable. But only if the DAG is correct. There is no inference without assumption.
+The full framework for using DAGs to design and critique statistical models is compli- cated. So instead of smothering you in the whole framework right now, I’ll build it up one example at a time. By the end of the next chapter, you’ll have a set of simple rules that let you accomplish quite a lot of criticism. And then other applications will be introduced in later chapters.
 
-* ***Dendogram:*** a dendrogram is a hierarchical tree that predicts the possible community partitions. Used mostly in cluster analysis. In network analysis can be used to identify communities (Barabasi 2016). <!-- "We can use a dendrogram to extract the underlying community organization. The dendrogram visualizes the order in which the nodes are assigned to specific communities. To identify the communities we must cut the dendrogram. Hierarchical clustering does not tell us where that cut should be. Using for example the cut indicated as a dashed line in Figure 9.9b, we recover the three obvious communities (ABC, EFG, and HIJK)." -->
+* ***Dendogram:*** a dendrogram is a hierarchical tree that predicts the possible community partitions. Used mostly in cluster analysis. In network analysis can be used to identify communities. <!-- (Barabasi 2016). --> <!-- "We can use a dendrogram to extract the underlying community organization. The dendrogram visualizes the order in which the nodes are assigned to specific communities. To identify the communities we must cut the dendrogram. Hierarchical clustering does not tell us where that cut should be. Using for example the cut indicated as a dashed line in Figure 9.9b, we recover the three obvious communities (ABC, EFG, and HIJK)." -->
 
 * ***Fitting:*** REWRITE, from Sololon Kurz: 	Two contrasting kinds of statistical error:
     - overfitting, “which leads to poor prediction by learning too much from the data”
