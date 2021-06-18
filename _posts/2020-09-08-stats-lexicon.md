@@ -10,10 +10,10 @@ pin: true
 has-code: true
 ---
 
-Many statistical terms are daunting. They can quickly become confusing. Even scholars themselves do not agree on what some mean. Try asking what a [p-value is at a conference](https://fivethirtyeight.com/features/not-even-scientists-can-easily-explain-p-values/) or, if you want to see academics practice kung-fu, ask them whether one should use fixed or random effects (safety not guaranteed). Many concepts sound alike and statistical learners end up feeling like reading a Russian novel: who is Alexandra Petrovna again? And what is her relation to Peter Alexandrovitch? Sometimes, it is even hard to distinguish statistical concepts from expletives used by [Captain Haddock](https://en.wikipedia.org/wiki/Captain_Haddock#Expletives). Being a non-native speaker compounds these difficulties. For instance, what does "significant" mean? 
+Many statistical terms are daunting and can quickly become confusing. Even scholars themselves do not agree on what some mean. Try asking what a [p-value is at a conference](https://fivethirtyeight.com/features/not-even-scientists-can-easily-explain-p-values/) or, if you want to see academics practice kung-fu, ask them whether one should use fixed or random effects (safety not guaranteed). Many concepts sound alike and statistical learners end up feeling like reading a Russian novel: who is Alexandra Petrovna again? And what is her relation to Peter Alexandrovitch? Sometimes, it is even hard to distinguish statistical concepts from expletives used by [Captain Haddock](https://en.wikipedia.org/wiki/Captain_Haddock#Expletives). Being a non-native speaker compounds these difficulties. 
 
-I have not yet come across a statistical book with an accessible glossary. So I hope this simple dictionary (work-in-progress!) will help you (and me) to survive the life statistical. Let me know where I can improve it! Use this dictionary at your own peril.
-
+I have not yet come across a statistical book with an accessible glossary. So I hope this simple dictionary (slowly updated, work-in-progress!) will help you (and me) to survive the life statistical. Let me know where I can improve it! <!-- Use this dictionary at your own peril.
+ -->
 <!-- "“Unfortunately, I have yet to find a single person who can explain what ignorability means in a language spoken by those who need to make this assumption or assess its plausibility in a given problem.” (The book of Why, p. 281)."
 
 Imai 2010 (focus on NDE - fn 3) vs. Balckwell (focus on CDE)
@@ -38,43 +38,42 @@ total effectc an be nul but mechanism can have effect. Gelato example of Aki.
 
 * ***Bias-variance trade-off:*** -->
 
-* ***Collider:*** common effect of two causes. In DAGs where two arrows collide. Thus if you condition on this collider, there can be an association between these two causes even though there is no causal relation between them. This is due to the fact that information circulates from one cause to the effect to the second cause. 
-	- <!-- This leads to *selection bias*: it looksassociation between A and Y even if A does not cause Y. NB: a common effect is not necessarily a collider: a common effect can be the effect of a collider. Selection bias also arises in this case if we condition on the effect of a collider. -->
-	- Example: imagine a light switch, which is our collider. You , electricity and light. If you see light is on, and switch is on, then you automatically learn that there is electricitiy. If there is electricity, and there is no light, you automatically deduce that the switch if off (draw DAG below, link to McElreath).
-	- See also: *DAG*, *selection bias*, *confounder*
+* ***Collider:*** common effect of two causes. In *DAGs*, colliders are where two arrows collide (see the graph and code below). If you condition on a collider, a spurrious association arises between two causes even though there is no causal relation between them. This is due to the fact that information circulates from one cause to the effect to the second cause. 
+	<!-- - --> <!-- This leads to *selection bias*: it looksassociation between A and Y even if A does not cause Y. NB: a common effect is not necessarily a collider: a common effect can be the effect of a collider. Selection bias also arises in this case if we condition on the effect of a collider. -->
+	<!-- - Example: DATING: imagine a light switch, which is our collider. You , electricity and light. If you see light is on, and switch is on, then you automatically learn that there is electricitiy. If there is electricity, and there is no light, you automatically deduce that the switch if off. -->
+	- See also: *DAG*, *selection bias*, *Berkson's paradox*, *confounder*, *mediator*
+
+<img src="https://zgtruchlewski.github.io/assets/img/sample/Collider_bw.png" width="300" height="150" />
 
 ```R
 library(dagitty)
-collider <- dagitty( "dag{ A -> C; B -> C }" ) 
-coordinates(collider) <- list( x=c(A=0,C=1,B=2) , y=c(A=0,C=1,B=0) ) 
+collider <- dagitty( "dag{ A -> Collider; B -> Collider }" ) 
+coordinates(collider) <- list( x=c(A=0,Collider=1,B=2) , y=c(A=0,Collider=1,B=0) ) 
 drawdag(collider)
 ```
 
-<img src="https://zgtruchlewski.github.io/assets/img/sample/Collider_bw.png" width="226" height="181" />
-
-* ***DAG (directed acyclic graph):*** DAGs help to describe relationships between variables 
-
-
-Graph means it is nodes and con- nections. Directed means the connections have arrows that indicate directions of causal in- fluence. And acyclic means that causes do not eventually flow back on themselves. A DAG is a way of describing qualitative causal relationships among variables. It isn’t as detailed as a full model description, but it contains information that a purely statistical model does not. Unlike a statistical model, a DAG will tell you the consequences of intervening to change a variable. But only if the DAG is correct. There is no inference without assumption.
-The full framework for using DAGs to design and critique statistical models is compli- cated. So instead of smothering you in the whole framework right now, I’ll build it up one example at a time. By the end of the next chapter, you’ll have a set of simple rules that let you accomplish quite a lot of criticism. And then other applications will be introduced in later chapters.
+* ***DAG (directed acyclic graph):*** DAGs help to describe relationships between variables. Directed, because the graph indicates the direction of causality between variables. Acyclic, because the causality goes not go back. Graph, because variables are nodes and ties are their relationships. DAGs represent our assumptions about the model that we want to estimate. 
+	- See also: *Judea Pearl*, *confounder*, *collider*, *selection bias*, *Berkson's paradox*, *mediator*
 
 * ***Dendogram:*** a dendrogram is a hierarchical tree that predicts the possible community partitions. Used mostly in cluster analysis. In network analysis can be used to identify communities. <!-- (Barabasi 2016). --> <!-- "We can use a dendrogram to extract the underlying community organization. The dendrogram visualizes the order in which the nodes are assigned to specific communities. To identify the communities we must cut the dendrogram. Hierarchical clustering does not tell us where that cut should be. Using for example the cut indicated as a dashed line in Figure 9.9b, we recover the three obvious communities (ABC, EFG, and HIJK)." -->
 
-* ***Fitting:*** REWRITE, from Sololon Kurz: 	Two contrasting kinds of statistical error:
+<!-- * ***Fitting:*** REWRITE, from Sololon Kurz: 	Two contrasting kinds of statistical error:
     - overfitting, “which leads to poor prediction by learning too much from the data”
     - underfitting, “which leads to poor prediction by learning too little from the data” (p. 166, emphasis added)
 
-* ***Hierarchical model:*** also called "multilevel models". 
+* ***Hierarchical model:*** also called "multilevel models".  -->
 
-* ***Likelihood:*** In Bayesian statistics, the probability model. In Bayes' formula, $p(data|theta)$. More simply, likelihood is a probability distribution. Difference between likelihood and probability: in Bayes we used the word likelihood because the data is fixed (Lambert 4.4). Likelihood does not necessarily sum up to one, while probability does.
+* ***Kurtosis:*** neither an insult nor a planet. Rather, kurtosis quantifies how fat the tails of a distribution are. It's also called the fourth moment of a distribution. <!-- Lambert's Bayes book -->
 
-* ***Moments of sample:*** to fit the first two moments (the mean and the standard deviation, respectively) of the sample.
-	- See also: mean, standard deviation, skewness, kurtosis. 
+<!-- * ***Likelihood:*** In Bayesian statistics, the probability model. In Bayes' formula, $p(data|theta)$. More simply, likelihood is a probability distribution. Difference between likelihood and probability: in Bayes we used the word likelihood because the data is fixed (Lambert 4.4). Likelihood does not necessarily sum up to one, while probability does. -->
+
+<!-- * ***Moments of sample:*** to fit the first two moments (the mean and the standard deviation, respectively) of the sample.
+	- See also: mean, standard deviation, skewness, kurtosis.  -->
 
 * ***Probability:*** Does probability exist? If yes, what is it? It's surprising to learn that there is no agreement on this. Some people like Bruno de Finetti claimed that probability does not exist - at least not objectively. It's in the eye of the beholder: many people have different probabilities of an event depending on their state of knowledge. Others defined probability base on notions such as a set of events (Kolmogorov), a long run frequency (Venn), or based on all possible outcomes of an experiment (Gosset). 
-	- Seel also: The Lady Tasting Tea, Ch. 29. 
+	<!-- - Seel also: The Lady Tasting Tea, Ch. 29.  -->
 
-* ***p-value:*** See [here](https://statsepi.substack.com/p/no-you-cant-explain-what-a-p-value)
+<!-- * ***p-value:*** See [here](https://statsepi.substack.com/p/no-you-cant-explain-what-a-p-value)
 
 * ***random sample:*** “Combining these two assumptions, we say in statistical language that our data sample is composed of independent and identically distributed observations, or alternatively we say that we have a random sample.” Excerpt From: Ben Lambert. “A Student’s Guide to Bayesian Statistics”. Apple Books. 
 
@@ -87,11 +86,67 @@ Several schools: Stability of Coefficinet visual or table-based (classic, Traunm
 
 <img src="https://zgtruchlewski.github.io/assets/img/sample/Stargazing_BW_Negative.png" width="426" height="281" />
 
+The figure on statisitical vs. substantive significance can be replicated with the following `R` code:
+
+```R
+### Data 
+x1 <- seq(-.2,.6,length=1000)
+y1 <- dnorm(x1,mean=.2, sd=.1)
+x2 <- seq(1,1.8,length=1000)
+y2 <- dnorm(x2,mean=1.4, sd=.1)
+x3 <- seq(-1,2,length=1000)
+y3 <- dnorm(x3,mean=0.8, sd=.5)
+
+### Plot 
+
+# Zero line
+segments(0,-.2,0,4, lwd=2, col="gray60", lty=2)
+
+# Densities
+plot(x2,y2, type="l", xlim=c(-1, 2), ylim=c(0, 5), lwd=1, axes=FALSE, 
+	xlab="",ylab="", xaxs="i", yaxs="i")
+	# # 95% CI shaded
+	x2p <- seq(1.2,1.6,length=1000)
+	y2p <- dnorm(x2p,mean=1.4, sd=.1)
+	polygon(c(1.2,x2p,1.6),c(0,y2p,0),col=col.alpha("gray",0.3), border=NA)
+
+lines(x1,y1, type="l", xlim=c(-1, 2), yaxt='n', lwd=1)
+	# # 95% CI shaded
+	x1p <- seq(0,.4,length=1000)
+	y1p <- dnorm(x1p,mean=0.2, sd=.1)
+	polygon(c(0,x1p,.4),c(0,y1p,0),col=col.alpha("gray",0.3), border=NA)
+
+lines(x3,y3, type="l", xlim=c(-1, 2), yaxt='n', lwd=1)
+	# # 95% CI shaded
+	x3p <- seq(-.2,1.8,length=1000)
+	y3p <- dnorm(x3p,mean=0.8, sd=.5)
+	polygon(c(-.2,x3p,1.8),c(0,y3p,0),col=col.alpha("gray",0.3), border=NA)
+
+axis(1, xlim=c(-1, 2), at= cbind(-1, -0.5, 0, .5, 1, 1.5, 2), 
+	labels=c("-2", "-1", "0", "1", "2", "3", "4"))
+
+# Add text
+text(-.775, 4.25, "Statistically significant?")
+text(-.775, 4.5, "Substantively significant?")
+
+text(.15, 4.25, "Yes") 
+text(.15, 4.5, "No")
+text(.2, 1, "Precision")
+
+text(1.35, 4.25, "Yes") 
+text(1.35, 4.5, "Yes")
+text(1.4, 1, "Ooomph &\nprecision")
+
+text(0.75, 4.25, "No") 
+text(0.75, 4.5, "Yes")
+text(0.8, .5, "Ooomph")
+```
+
 * ***Sequential ignorability:*** 
 
-* ***Sharp bound:*** partially identification of MAnski, mathematically guaranteed bound of ATE vs. Confidence Interval due to uncertainty of sample. 
+* ***Sharp bound:*** partially identification of MAnski, mathematically guaranteed bound of ATE vs. Confidence Interval due to uncertainty of sample.  -->
 
-* ***Skewness:*** The skewness and kurtosis (skewness measures how symmetric a distribution is, and kurtosis quantifies how fat its tails are; these relate to the third and fourth moments of a distribution, respectively).”
+* ***Skewness:*** skewness measures how symmetric a distribution is. It is also called the third moment of a distribution.”
 
 
 <!-- These are the most important concepts we've seen in McElreath's book and in the course. Try to skim this through and see what sticks and what does not. Also, if you come by better definitions, please do send them to me!
@@ -164,69 +219,4 @@ See Frank Harrel here: http://biostat.mc.vanderbilt.edu/wiki/Main/CourseBios330C
 - *zero-inflated outcomes:* When the zeros in a distribution come from different distributions, that is: there are different processes at play of why zero may arise (either nothing happened or the process in question failed to get started). Thus we need a mixture model to model the two or more processes at play. See section 11.2 of McElreath's book and his example of monks not producing manuscripts any given day either because they did not finish it or because they are drunk.
  -->
 
-# Sources
-
-
-# Code
-
-Link for the DAG code
-
-```R
-library(dagitty)
-```
-
-The figure on statisitical vs. substantive significance can be replicated with the following `R` code:
-
-```R
-### Data 
-x1 <- seq(-.2,.6,length=1000)
-y1 <- dnorm(x1,mean=.2, sd=.1)
-x2 <- seq(1,1.8,length=1000)
-y2 <- dnorm(x2,mean=1.4, sd=.1)
-x3 <- seq(-1,2,length=1000)
-y3 <- dnorm(x3,mean=0.8, sd=.5)
-
-### Plot 
-
-# Zero line
-segments(0,-.2,0,4, lwd=2, col="gray60", lty=2)
-
-# Densities
-plot(x2,y2, type="l", xlim=c(-1, 2), ylim=c(0, 5), lwd=1, axes=FALSE, 
-	xlab="",ylab="", xaxs="i", yaxs="i")
-	# # 95% CI shaded
-	x2p <- seq(1.2,1.6,length=1000)
-	y2p <- dnorm(x2p,mean=1.4, sd=.1)
-	polygon(c(1.2,x2p,1.6),c(0,y2p,0),col=col.alpha("gray",0.3), border=NA)
-
-lines(x1,y1, type="l", xlim=c(-1, 2), yaxt='n', lwd=1)
-	# # 95% CI shaded
-	x1p <- seq(0,.4,length=1000)
-	y1p <- dnorm(x1p,mean=0.2, sd=.1)
-	polygon(c(0,x1p,.4),c(0,y1p,0),col=col.alpha("gray",0.3), border=NA)
-
-lines(x3,y3, type="l", xlim=c(-1, 2), yaxt='n', lwd=1)
-	# # 95% CI shaded
-	x3p <- seq(-.2,1.8,length=1000)
-	y3p <- dnorm(x3p,mean=0.8, sd=.5)
-	polygon(c(-.2,x3p,1.8),c(0,y3p,0),col=col.alpha("gray",0.3), border=NA)
-
-axis(1, xlim=c(-1, 2), at= cbind(-1, -0.5, 0, .5, 1, 1.5, 2), 
-	labels=c("-2", "-1", "0", "1", "2", "3", "4"))
-
-# Add text
-text(-.775, 4.25, "Statistically significant?")
-text(-.775, 4.5, "Substantively significant?")
-
-text(.15, 4.25, "Yes") 
-text(.15, 4.5, "No")
-text(.2, 1, "Precision")
-
-text(1.35, 4.25, "Yes") 
-text(1.35, 4.5, "Yes")
-text(1.4, 1, "Ooomph &\nprecision")
-
-text(0.75, 4.25, "No") 
-text(0.75, 4.5, "Yes")
-text(0.8, .5, "Ooomph")
-```
+<!-- # Sources -->
