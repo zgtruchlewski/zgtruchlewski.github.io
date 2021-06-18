@@ -41,9 +41,16 @@ total effectc an be nul but mechanism can have effect. Gelato example of Aki.
 * ***Collider:*** common effect of two causes. In DAGs where two arrows collide. Thus if you condition on this collider, there can be an association between these two causes even though there is no causal relation between them. This is due to the fact that information circulates from one cause to the effect to the second cause. 
 	- <!-- This leads to *selection bias*: it looksassociation between A and Y even if A does not cause Y. NB: a common effect is not necessarily a collider: a common effect can be the effect of a collider. Selection bias also arises in this case if we condition on the effect of a collider. -->
 	- Example: imagine a light switch, which is our collider. You , electricity and light. If you see light is on, and switch is on, then you automatically learn that there is electricitiy. If there is electricity, and there is no light, you automatically deduce that the switch if off (draw DAG below, link to McElreath).
-	- See also: *selection bias*, *confounder*
+	- See also: *DAG*, *selection bias*, *confounder*
 
-<img src="https://zgtruchlewski.github.io/assets/img/sample/Collider_bw.png" width="426" height="281" />
+```R
+library(dagitty)
+collider <- dagitty( "dag{ A -> C; B -> C }" ) 
+coordinates(collider) <- list( x=c(A=0,C=1,B=2) , y=c(A=0,C=1,B=0) ) 
+drawdag(collider)
+```
+
+<img src="https://zgtruchlewski.github.io/assets/img/sample/Collider_bw.png" width="226" height="181" />
 
 * ***DAG (directed acyclic graph):*** DAGs help to describe relationships between variables 
 
