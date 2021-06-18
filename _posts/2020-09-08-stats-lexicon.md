@@ -12,8 +12,8 @@ has-code: true
 
 Many statistical terms are daunting and can quickly become confusing. Even scholars themselves do not agree on what some mean. Try asking what a [p-value is at a conference](https://fivethirtyeight.com/features/not-even-scientists-can-easily-explain-p-values/) or, if you want to see academics practice kung-fu, ask them whether one should use fixed or random effects (safety not guaranteed). Many concepts sound alike and statistical learners end up feeling like reading a Russian novel: who is Alexandra Petrovna again? And what is her relation to Peter Alexandrovitch? Sometimes, it is even hard to distinguish statistical concepts from expletives used by [Captain Haddock](https://en.wikipedia.org/wiki/Captain_Haddock#Expletives). Being a non-native speaker compounds these difficulties. 
 
-I have not yet come across a statistical book with an accessible glossary. So I hope this simple dictionary (slowly updated, work-in-progress!) will help you (and me) to survive the life statistical. Let me know where I can improve it! <!-- Use this dictionary at your own peril.
- -->
+I have not yet come across a statistical book with an accessible glossary. So I hope this simple dictionary (slowly updated, work-in-progress!) will help you (and me) to survive the life statistical. Let me know where I can improve it! <!-- Use this dictionary at your own peril. -->
+
 <!-- "“Unfortunately, I have yet to find a single person who can explain what ignorability means in a language spoken by those who need to make this assumption or assess its plausibility in a given problem.” (The book of Why, p. 281)."
 
 Imai 2010 (focus on NDE - fn 3) vs. Balckwell (focus on CDE)
