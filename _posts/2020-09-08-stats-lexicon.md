@@ -1,9 +1,9 @@
 ---
 title: Statistical dictionary
 author: Zbigniew Truchlewski
-date: 2020-09-07 19:34:00 +0000
+date: 2020-09-08 19:34:00 +0000
 categories: [Website]
-tags: [learning stats]
+tags: [learning,stats]
 toc: true
 math: true
 pin: true
@@ -53,7 +53,7 @@ DISTRIBUTIONS FROM BEN LAMBERT, CH. 8.
 
 * ***Hierarchical model:*** also called "multilevel models". 
 
-* ***Likelihood:*** In Bayesian statistics, the probability model. In Bayes' formula, p(data|theta). More simply, likelihood is a probability distribution. Difference between likelihood and probability: in Bayes we used the word likelihood because the data is fixed (Lambert 4.4). Likelihood does not necessarily sum up to one, while probability does.
+* ***Likelihood:*** In Bayesian statistics, the probability model. In Bayes' formula, $p(data|theta)$. More simply, likelihood is a probability distribution. Difference between likelihood and probability: in Bayes we used the word likelihood because the data is fixed (Lambert 4.4). Likelihood does not necessarily sum up to one, while probability does.
 
 * ***Moments of sample:*** to fit the first two moments (the mean and the standard deviation, respectively) of the sample.
 	- See also: mean, standard deviation, skewness, kurtosis. 
