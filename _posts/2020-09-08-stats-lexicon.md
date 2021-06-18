@@ -2,7 +2,7 @@
 title: Statistical dictionary
 author: Zbigniew Truchlewski
 date: 2020-09-08 19:34:00 +0000
-categories: [Website]
+categories: [Stats]
 tags: [learning,stats]
 toc: true
 math: true
