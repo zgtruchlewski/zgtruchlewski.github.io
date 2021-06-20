@@ -1,5 +1,5 @@
 ---
-title: Super Review of Lambert's Bayes Book
+title: Review of Lambert's Bayes Book
 author: Zbigniew Truchlewski
 date: 2021-06-20 20:00:00 +0000
 categories: [Stats]
