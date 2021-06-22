@@ -14,6 +14,8 @@ Many statistical terms are daunting and can quickly become confusing. Even schol
 
 I have not yet come across a statistical book with an accessible glossary. So I hope this simple dictionary (slowly updated, work-in-progress!) will help you (and me) to survive the life statistical. Let me know where I can improve it! <!-- Use this dictionary at your own peril. -->
 
+Also, caveat lector!
+
 <!-- "“Unfortunately, I have yet to find a single person who can explain what ignorability means in a language spoken by those who need to make this assumption or assess its plausibility in a given problem.” (The book of Why, p. 281)."
 
 Imai 2010 (focus on NDE - fn 3) vs. Balckwell (focus on CDE)
@@ -37,6 +39,9 @@ total effectc an be nul but mechanism can have effect. Gelato example of Aki.
 * ***Bias:*** See [here](https://catalogofbias.org/biases/)
 
 * ***Bias-variance trade-off:*** -->
+
+* ***Bootstrapping:*** or how statistics proved that the expression "pull oneself up by one's bootstraps" can actually make sense and that Baron Munchausen was a statistical precursor. Bootstrap means resampling randomly your dataset many times (thus creating many samples) to calculate an estimate, its standard errors and confidence intervals. Each of these new samples has it own characteristics (mean, median etc): if you take all these samples, you can have a distribution of these characteristics (the sampling distribution). Contrast this to standard hypothesis testing, which requires test statistics and assumptions. <!-- Source: Efron (1979) --> <!-- https://statisticsbyjim.com/hypothesis-testing/bootstrapping/ --> <!-- Gelman and Vehtari Ideas -->
+	- See also: *jackknife*, *cross validation*, *information criteria*, *hypothesis testing*
 
 * ***Collider:*** common effect of two causes. In *DAGs*, colliders are where two arrows collide (see the graph and code below). If you condition on a collider, a spurrious association arises between two causes even though there is no causal relation between them. This is due to the fact that information circulates from one cause to the effect to the second cause. 
 	<!-- - --> <!-- This leads to *selection bias*: it looksassociation between A and Y even if A does not cause Y. NB: a common effect is not necessarily a collider: a common effect can be the effect of a collider. Selection bias also arises in this case if we condition on the effect of a collider. -->
@@ -70,14 +75,20 @@ drawdag(collider)
 <!-- * ***Moments of sample:*** to fit the first two moments (the mean and the standard deviation, respectively) of the sample.
 	- See also: mean, standard deviation, skewness, kurtosis.  -->
 
+* ***Multilevel or hierarchical models:*** models whose parameters vary by groups/clusters. <!-- Gelman and Vehtari, allowing models to adapt to cluster sampling, longitudinal studies, time-series cross-sectional data, meta-analysis, and other structured settings. In a regression context, a multilevel model can be viewed as a particular parametrized covariance structure or as a probability distribution where the number of parameters increases in proportion to the data. -->
+	- See also: *cross-classified model*, *fixed effects*, *hyper priors*, *pooling*, *random effects*, *regularization*, *shrinkage*, *varying intercepts*, *varying effects*
+
 * ***Probability:*** Does probability exist? If yes, what is it? It's surprising to learn that there is no agreement on this. Some people like Bruno de Finetti claimed that probability does not exist - at least not objectively. It's in the eye of the beholder: many people have different probabilities of an event depending on their state of knowledge. Others defined probability base on notions such as a set of events (Kolmogorov), a long run frequency (Venn), or based on all possible outcomes of an experiment (Gosset). 
 	<!-- - Seel also: The Lady Tasting Tea, Ch. 29.  -->
 
 <!-- * ***p-value:*** See [here](https://statsepi.substack.com/p/no-you-cant-explain-what-a-p-value)
 
-* ***random sample:*** “Combining these two assumptions, we say in statistical language that our data sample is composed of independent and identically distributed observations, or alternatively we say that we have a random sample.” Excerpt From: Ben Lambert. “A Student’s Guide to Bayesian Statistics”. Apple Books. 
+* ***random sample:*** “Combining these two assumptions, we say in statistical language that our data sample is composed of independent and identically distributed observations, or alternatively we say that we have a random sample.” Excerpt From: Ben Lambert. “A Student’s Guide to Bayesian Statistics”. Apple Books.  -->
 
-* ***Sensitivity analysis:*** Usual done in several ways: 1/ Show how estimates change as we add controsl. Why this is bad? 2/ Fom Imai et al 2011 p. 774 L: Sensitivity analysis provides one way to do this. The goal of a sensitivity analysis is to quantify the exact de- gree to which the key identification assumption must be violated for a researcher’s original conclusion to be re- versed. If inference is sensitive, a slight violation of the assumption may lead to substantively different conclu- sions. Although sensitivity analyses are not currently a routine part of statistical practice in political science (but see Blattman 2009, and Imai and Yamamoto 2010), we would argue that they should form an indispensable part of empirical research (Rosenbaum, 2002b).
+* ***Regularization:*** Sometimes, our stats models learn too much from the data at hand: they get overhyped and think that some of noise is actually signal. This happens especially when we have lots of parameters (sometimes more than data points). So we would like something that helps us avoid this problem of "overfitting". One solution in Bayesian stats is to have "regularizing" priors, i.e. which tell our model to take it easy and shrink coefficients towards zero. Another solutions is to use lasso or ridge regression to reduce coefficient variance. You can also think of regularization as a penalty on the parameters. The paradox is that regularization yields better predictions by making the model worse at fitting the sample.
+	- See also: *underfitting*, *overfitting*, *lasso*, *ridge*, *shrinkage*, *multilevel models*
+
+<!-- * ***Sensitivity analysis:*** Usual done in several ways: 1/ Show how estimates change as we add controsl. Why this is bad? 2/ Fom Imai et al 2011 p. 774 L: Sensitivity analysis provides one way to do this. The goal of a sensitivity analysis is to quantify the exact de- gree to which the key identification assumption must be violated for a researcher’s original conclusion to be re- versed. If inference is sensitive, a slight violation of the assumption may lead to substantively different conclu- sions. Although sensitivity analyses are not currently a routine part of statistical practice in political science (but see Blattman 2009, and Imai and Yamamoto 2010), we would argue that they should form an indispensable part of empirical research (Rosenbaum, 2002b).
 
 Several schools: Stability of Coefficinet visual or table-based (classic, Traunmeuller? Adolph), Bounds (Leamer, Young, Sala-i-Martin), and unobservable confounders (Blackwell, Oster). 
 
@@ -147,7 +158,6 @@ text(0.8, .5, "Ooomph")
 * ***Sharp bound:*** partially identification of MAnski, mathematically guaranteed bound of ATE vs. Confidence Interval due to uncertainty of sample.  -->
 
 * ***Skewness:*** skewness measures how symmetric a distribution is. It is also called the third moment of a distribution.”
-
 
 <!-- These are the most important concepts we've seen in McElreath's book and in the course. Try to skim this through and see what sticks and what does not. Also, if you come by better definitions, please do send them to me!
 
