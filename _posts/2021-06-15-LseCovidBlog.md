@@ -3,7 +3,7 @@ title: Bypassing democracy or buying time for democracies? The EU and COVID
 author: Zbigniew Truchlewski
 date: 2021-06-15 11:00:00 +0000
 categories: [Research]
-tags: [emergency politics,european integration,democracy,crisis politics,COVID 19]
+tags: [emergency politics,european integration,democracy,crisis politics,COVID 19,EU politics]
 ---
 
 *This text, which I co-authored with [Waltraud Schelkle](https://www.lse.ac.uk/european-institute/people/Schelkle-Waltraud) and [Joe Ganderson](https://www.lse.ac.uk/european-institute/people/ganderson-joseph), first appeared in the [LSE COVID-19 Blog](https://blogs.lse.ac.uk/covid19/2021/06/08/bypassing-democracy-or-buying-time-for-democracies-the-eu-and-covid/) with all hyperlinks.*
