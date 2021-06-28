@@ -40,6 +40,8 @@ total effectc an be nul but mechanism can have effect. Gelato example of Aki.
 
 * ***Bias-variance trade-off:*** -->
 
+<!-- * ***Bias amplification:*** https://academic.oup.com/aje/article/174/11/1223/111637 -->
+
 * ***Bootstrapping:*** or how statistics proved that the expression "pull oneself up by one's bootstraps" can actually make sense and that Baron Munchausen was a statistical precursor. Bootstrap means resampling randomly your dataset many times (thus creating many samples) to calculate an estimate, its standard errors and confidence intervals. Each of these new samples has it own characteristics (mean, median etc): if you take all these samples, you can have a distribution of these characteristics (the sampling distribution). Contrast this to standard hypothesis testing, which requires test statistics and assumptions. <!-- Source: Efron (1979) --> <!-- https://statisticsbyjim.com/hypothesis-testing/bootstrapping/ --> <!-- Gelman and Vehtari Ideas -->
 	- See also: *jackknife*, *cross validation*, *information criteria*, *hypothesis testing*
 
@@ -60,6 +62,16 @@ drawdag(collider)
 * ***DAG (directed acyclic graph):*** DAGs help to describe relationships between variables. Directed, because the graph indicates the direction of causality between variables. Acyclic, because the causality goes not go back. Graph, because variables are nodes and ties are their relationships. DAGs represent our assumptions about the model that we want to estimate. 
 	- See also: *Judea Pearl*, *confounder*, *collider*, *selection bias*, *Berkson's paradox*, *mediator*
 
+<img src="https://zgtruchlewski.github.io/assets/img/sample/DAG_bw.png" width="300" height="150" />
+
+```R
+library(dagitty)
+DAG <- dagitty( "dag{ Directed -> Acyclic; Acyclic -> Graph; Graph -> Inference; Directed -> Causal; Causal -> Inference }" ) 
+coordinates(DAG) <- list( x=c(Directed=0, Acyclic=.5, Graph=1, Causal=0,Inference=1) , y=c(Directed=0, Acyclic=.5, Graph=0, Causal=1,Inference=1) ) 
+drawdag(DAG)
+```
+
+
 * ***Dendogram:*** a dendrogram is a hierarchical tree that predicts the possible community partitions. Used mostly in cluster analysis. In network analysis can be used to identify communities. <!-- (Barabasi 2016). --> <!-- "We can use a dendrogram to extract the underlying community organization. The dendrogram visualizes the order in which the nodes are assigned to specific communities. To identify the communities we must cut the dendrogram. Hierarchical clustering does not tell us where that cut should be. Using for example the cut indicated as a dashed line in Figure 9.9b, we recover the three obvious communities (ABC, EFG, and HIJK)." -->
 
 <!-- * ***Fitting:*** REWRITE, from Sololon Kurz: 	Two contrasting kinds of statistical error:
@@ -67,6 +79,8 @@ drawdag(collider)
     - underfitting, “which leads to poor prediction by learning too little from the data” (p. 166, emphasis added)
 
 * ***Hierarchical model:*** also called "multilevel models".  -->
+
+<!-- * ***Intention to treat:*** https://en.wikipedia.org/wiki/Intention-to-treat_analysis -->
 
 * ***Kurtosis:*** neither an insult nor a planet. Rather, kurtosis quantifies how fat the tails of a distribution are. It's also called the fourth moment of a distribution. <!-- Lambert's Bayes book -->
 
@@ -158,6 +172,8 @@ text(0.8, .5, "Ooomph")
 * ***Sharp bound:*** partially identification of MAnski, mathematically guaranteed bound of ATE vs. Confidence Interval due to uncertainty of sample.  -->
 
 * ***Skewness:*** skewness measures how symmetric a distribution is. It is also called the third moment of a distribution.”
+
+<!-- * ***Table 2 fallacy:*** https://academic.oup.com/aje/article/177/4/292/147738 -->
 
 <!-- These are the most important concepts we've seen in McElreath's book and in the course. Try to skim this through and see what sticks and what does not. Also, if you come by better definitions, please do send them to me!
 
