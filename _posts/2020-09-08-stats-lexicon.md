@@ -45,7 +45,7 @@ total effectc an be nul but mechanism can have effect. Gelato example of Aki.
 * ***Bootstrapping:*** or how statistics proved that the expression "pull oneself up by one's bootstraps" can actually make sense and that Baron Munchausen was a statistical precursor. Bootstrap means resampling randomly your dataset many times (thus creating many samples) to calculate an estimate, its standard errors and confidence intervals. Each of these new samples has it own characteristics (mean, median etc): if you take all these samples, you can have a distribution of these characteristics (the sampling distribution). Contrast this to standard hypothesis testing, which requires test statistics and assumptions. <!-- Source: Efron (1979) --> <!-- https://statisticsbyjim.com/hypothesis-testing/bootstrapping/ --> <!-- Gelman and Vehtari Ideas -->
 	- See also: *jackknife*, *cross validation*, *information criteria*, *hypothesis testing*
 
-* ***Collider:*** common effect of two causes. In *DAGs*, colliders are where two arrows collide (see the graph and code below). If you condition on a collider, a spurrious association arises between two causes even though there is no causal relation between them. This is due to the fact that information circulates from one cause to the effect to the second cause. 
+* ***Collider:*** common effect of two causes. In *DAGs*, colliders are where two arrows collide (see the graph and code below). If you condition on a collider, a spurrious association arises between two causes even though there is no causal relation between them. This is due to the fact that information circulates from one cause to the effect to the second cause. It is rarely a good idea to control for/condition on colliders in a regression!
 	<!-- - --> <!-- This leads to *selection bias*: it looksassociation between A and Y even if A does not cause Y. NB: a common effect is not necessarily a collider: a common effect can be the effect of a collider. Selection bias also arises in this case if we condition on the effect of a collider. -->
 	<!-- - Example: DATING: imagine a light switch, which is our collider. You , electricity and light. If you see light is on, and switch is on, then you automatically learn that there is electricitiy. If there is electricity, and there is no light, you automatically deduce that the switch if off. -->
 	- See also: *DAG*, *selection bias*, *Berkson's paradox*, *confounder*, *mediator*
@@ -56,7 +56,19 @@ total effectc an be nul but mechanism can have effect. Gelato example of Aki.
 library(dagitty)
 collider <- dagitty( "dag{ A -> Collider; B -> Collider }" ) 
 coordinates(collider) <- list( x=c(A=0,Collider=1,B=2) , y=c(A=0,Collider=1,B=0) ) 
-drawdag(collider)
+plot(collider)
+```
+
+* ***Confounder:*** Variable influencing both our treatment/exposure/pet variable and our outcome. The confounder is thus a common cause and should be controlled for. It can be also called omitted variable bias. 
+	- See also: *Berkson's paradox*, *collider*, *DAG*, *mediator*, *selection bias*
+
+<img src="https://zgtruchlewski.github.io/assets/img/sample/Confounder_bw.png" width="300" height="150" />
+
+```R
+library(dagitty)
+confounder <- dagitty( "dag{ A -> B; A <- Confounder; B <- Confounder }" ) 
+coordinates(confounder) <- list( x=c(A=0,Confounder=1,B=2) , y=c(A=1,Confounder=0,B=1) ) 
+plot(confounder)
 ```
 
 * ***DAG (directed acyclic graph):*** DAGs help to describe relationships between variables. Directed, because the graph indicates the direction of causality between variables. Acyclic, because the causality goes not go back. Graph, because variables are nodes and ties are their relationships. DAGs represent our assumptions about the model that we want to estimate. 
@@ -70,7 +82,7 @@ DAG <- dagitty( "dag{ Directed -> Acyclic; Acyclic -> Graph; Graph -> Inference;
 		Directed -> Causal; Causal -> Inference }" ) 
 coordinates(DAG) <- list( x=c(Directed=0, Acyclic=.5, Graph=1, Causal=0,Inference=1) ,
 		y=c(Directed=0, Acyclic=.5, Graph=0, Causal=1,Inference=1) ) 
-drawdag(DAG)
+plot(DAG)
 ```
 
 
@@ -101,7 +113,7 @@ drawdag(DAG)
 
 * ***random sample:*** “Combining these two assumptions, we say in statistical language that our data sample is composed of independent and identically distributed observations, or alternatively we say that we have a random sample.” Excerpt From: Ben Lambert. “A Student’s Guide to Bayesian Statistics”. Apple Books.  -->
 
-* ***Regularization:*** Sometimes, our stats models learn too much from the data at hand: they get overhyped and think that some of noise is actually signal. This happens especially when we have lots of parameters (sometimes more than data points). So we would like something that helps us avoid this problem of "overfitting". One solution in Bayesian stats is to have "regularizing" priors, i.e. which tell our model to take it easy and shrink coefficients towards zero. Another solutions is to use lasso or ridge regression to reduce coefficient variance. You can also think of regularization as a penalty on the parameters. The paradox is that regularization yields better predictions by making the model worse at fitting the sample.
+* ***Regularization:*** Sometimes, our stats models learn too much from the data at hand: they get overhyped and think that some of the noise (random stuff) is actually signal (the real stuff). This happens especially when we have lots of parameters (sometimes more than data points). So we would like something that helps us avoid this problem of "overfitting". One solution in Bayesian stats is to have "regularizing" priors, i.e. which tell our model to take it easy and shrink coefficients towards zero. Another solutions is to use lasso or ridge regression to reduce coefficient variance. You can also think of regularization as a penalty on the parameters. The paradox is that regularization yields better predictions by making the model worse at fitting the sample.
 	- See also: *underfitting*, *overfitting*, *lasso*, *ridge*, *shrinkage*, *multilevel models*
 
 <!-- * ***Sensitivity analysis:*** Usual done in several ways: 1/ Show how estimates change as we add controsl. Why this is bad? 2/ Fom Imai et al 2011 p. 774 L: Sensitivity analysis provides one way to do this. The goal of a sensitivity analysis is to quantify the exact de- gree to which the key identification assumption must be violated for a researcher’s original conclusion to be re- versed. If inference is sensitive, a slight violation of the assumption may lead to substantively different conclu- sions. Although sensitivity analyses are not currently a routine part of statistical practice in political science (but see Blattman 2009, and Imai and Yamamoto 2010), we would argue that they should form an indispensable part of empirical research (Rosenbaum, 2002b).
@@ -173,7 +185,7 @@ text(0.8, .5, "Ooomph")
 
 * ***Sharp bound:*** partially identification of MAnski, mathematically guaranteed bound of ATE vs. Confidence Interval due to uncertainty of sample.  -->
 
-* ***Skewness:*** skewness measures how symmetric a distribution is. It is also called the third moment of a distribution.”
+* ***Skewness:*** skewness measures how symmetric a distribution is. It is also called the third moment of a distribution.
 
 <!-- * ***Table 2 fallacy:*** https://academic.oup.com/aje/article/177/4/292/147738 -->
 
