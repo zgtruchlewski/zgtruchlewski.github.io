@@ -45,7 +45,7 @@ total effectc an be nul but mechanism can have effect. Gelato example of Aki.
 * ***Bootstrapping:*** or how statistics proved that the expression "pull oneself up by one's bootstraps" can actually make sense and that Baron Munchausen was a statistical precursor. Bootstrap means resampling randomly your dataset many times (thus creating many samples) to calculate an estimate, its standard errors and confidence intervals. Each of these new samples has it own characteristics (mean, median etc): if you take all these samples, you can have a distribution of these characteristics (the sampling distribution). Contrast this to standard hypothesis testing, which requires test statistics and assumptions. <!-- Source: Efron (1979) --> <!-- https://statisticsbyjim.com/hypothesis-testing/bootstrapping/ --> <!-- Gelman and Vehtari Ideas -->
 	- See also: *jackknife*, *cross validation*, *information criteria*, *hypothesis testing*
 
-* ***Collider:*** common effect of two causes. In *DAGs*, colliders are where two arrows collide (see the graph and code below). If you condition on a collider, a spurrious association arises between two causes even though there is no causal relation between them. This is due to the fact that information circulates from one cause to the effect to the second cause. It is rarely a good idea to control for/condition on colliders in a regression!
+* ***Collider:*** common effect of two causes. In *DAGs*, colliders are where two arrows collide (see the graph and code below). If you condition on a collider, a spurrious association arises between two causes even though there is no causal relation between them. This is due to the fact that information circulates from one cause to the effect to the second cause. It is rarely a good idea to condition on colliders in a regression, as Berkson's paradox shows!
 	<!-- - --> <!-- This leads to *selection bias*: it looksassociation between A and Y even if A does not cause Y. NB: a common effect is not necessarily a collider: a common effect can be the effect of a collider. Selection bias also arises in this case if we condition on the effect of a collider. -->
 	<!-- - Example: DATING: imagine a light switch, which is our collider. You , electricity and light. If you see light is on, and switch is on, then you automatically learn that there is electricitiy. If there is electricity, and there is no light, you automatically deduce that the switch if off. -->
 	- See also: *DAG*, *selection bias*, *Berkson's paradox*, *confounder*, *mediator*
@@ -59,7 +59,7 @@ coordinates(collider) <- list( x=c(A=0,Collider=1,B=2) , y=c(A=0,Collider=1,B=0)
 plot(collider)
 ```
 
-* ***Confounder:*** Variable influencing both our treatment/exposure/pet variable and our outcome. The confounder is thus a common cause and should be controlled for. It can be also called omitted variable bias. 
+* ***Confounder:*** Variable influencing both our treatment/exposure/pet variable and our outcome. The confounder is thus a common cause and should be conditioned on. It can be also called omitted variable bias. 
 	- See also: *Berkson's paradox*, *collider*, *DAG*, *mediator*, *selection bias*
 
 <img src="https://zgtruchlewski.github.io/assets/img/sample/Confounder_bw.png" width="300" height="150" />
