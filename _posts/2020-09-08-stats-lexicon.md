@@ -259,4 +259,9 @@ See Frank Harrel here: http://biostat.mc.vanderbilt.edu/wiki/Main/CourseBios330C
 - *zero-inflated outcomes:* When the zeros in a distribution come from different distributions, that is: there are different processes at play of why zero may arise (either nothing happened or the process in question failed to get started). Thus we need a mixture model to model the two or more processes at play. See section 11.2 of McElreath's book and his example of monks not producing manuscripts any given day either because they did not finish it or because they are drunk.
  -->
 
+
 <!-- # Sources -->
+
+# Acknowledgments
+
+Thanks to Alex Moise, Aki Suzuki and Joe Ganderson!
