@@ -85,7 +85,6 @@ coordinates(DAG) <- list( x=c(Directed=0, Acyclic=.5, Graph=1, Causal=0,Inferenc
 plot(DAG)
 ```
 
-
 * ***Dendogram:*** a dendrogram is a hierarchical tree that predicts the possible community partitions. Used mostly in cluster analysis. In network analysis can be used to identify communities. <!-- (Barabasi 2016). --> <!-- "We can use a dendrogram to extract the underlying community organization. The dendrogram visualizes the order in which the nodes are assigned to specific communities. To identify the communities we must cut the dendrogram. Hierarchical clustering does not tell us where that cut should be. Using for example the cut indicated as a dashed line in Figure 9.9b, we recover the three obvious communities (ABC, EFG, and HIJK)." -->
 
 <!-- * ***Fitting:*** REWRITE, from Sololon Kurz: 	Two contrasting kinds of statistical error:
@@ -105,6 +104,8 @@ plot(DAG)
 
 * ***Multilevel or hierarchical models:*** models whose parameters vary by groups/clusters. <!-- Gelman and Vehtari, allowing models to adapt to cluster sampling, longitudinal studies, time-series cross-sectional data, meta-analysis, and other structured settings. In a regression context, a multilevel model can be viewed as a particular parametrized covariance structure or as a probability distribution where the number of parameters increases in proportion to the data. -->
 	- See also: *cross-classified model*, *fixed effects*, *hyper priors*, *pooling*, *random effects*, *regularization*, *shrinkage*, *varying intercepts*, *varying effects*
+
+* ***Prior:*** Simply put, a prior is the plausibility of your hypothesis in the absence of evidence. 
 
 * ***Probability:*** Does probability exist? If yes, what is it? It's surprising to learn that there is no agreement on this. Some people like Bruno de Finetti claimed that probability does not exist - at least not objectively. It's in the eye of the beholder: many people have different probabilities of an event depending on their state of knowledge. Others defined probability base on notions such as a set of events (Kolmogorov), a long run frequency (Venn), or based on all possible outcomes of an experiment (Gosset). 
 	<!-- - Seel also: The Lady Tasting Tea, Ch. 29.  -->
