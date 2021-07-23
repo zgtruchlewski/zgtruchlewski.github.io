@@ -1,4 +1,4 @@
 In order to update your website:
 
 - create a post: go to _posts, create a md file following the 
-- then go to tools, right click on publish and copy paste into terminal: bash publish.sh
+- then go to tools, right click on "publish.sh" and copy paste into terminal: bash publish.sh
