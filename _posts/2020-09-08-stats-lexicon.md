@@ -119,7 +119,7 @@ plot(DAG)
 
 <!-- * ***Sensitivity analysis:*** Usual done in several ways: 1/ Show how estimates change as we add controsl. Why this is bad? 2/ Fom Imai et al 2011 p. 774 L: Sensitivity analysis provides one way to do this. The goal of a sensitivity analysis is to quantify the exact de- gree to which the key identification assumption must be violated for a researcher’s original conclusion to be re- versed. If inference is sensitive, a slight violation of the assumption may lead to substantively different conclu- sions. Although sensitivity analyses are not currently a routine part of statistical practice in political science (but see Blattman 2009, and Imai and Yamamoto 2010), we would argue that they should form an indispensable part of empirical research (Rosenbaum, 2002b).
 
-Several schools: Stability of Coefficinet visual or table-based (classic, Traunmeuller? Adolph), Bounds (Leamer, Young, Sala-i-Martin), and unobservable confounders (Blackwell, Oster). 
+Several schools: Stability of Coefficinet visual or table-based (classic, Traunmeuller? Adolph), Bounds (Leamer, Young, Sala-i-Martin), and unobservable confounders (Blackwell, Oster).  -->
 
 * ***Significance:*** distinction between statistical and substantive
 	- See also: p-value. [####Significance]
@@ -164,27 +164,11 @@ lines(x3,y3, type="l", xlim=c(-1, 2), yaxt='n', lwd=1)
 
 axis(1, xlim=c(-1, 2), at= cbind(-1, -0.5, 0, .5, 1, 1.5, 2), 
 	labels=c("-2", "-1", "0", "1", "2", "3", "4"))
-
-# Add text
-text(-.775, 4.25, "Statistically significant?")
-text(-.775, 4.5, "Substantively significant?")
-
-text(.15, 4.25, "Yes") 
-text(.15, 4.5, "No")
-text(.2, 1, "Precision")
-
-text(1.35, 4.25, "Yes") 
-text(1.35, 4.5, "Yes")
-text(1.4, 1, "Ooomph &\nprecision")
-
-text(0.75, 4.25, "No") 
-text(0.75, 4.5, "Yes")
-text(0.8, .5, "Ooomph")
 ```
 
 * ***Sequential ignorability:*** 
 
-* ***Sharp bound:*** partially identification of MAnski, mathematically guaranteed bound of ATE vs. Confidence Interval due to uncertainty of sample.  -->
+* ***Sharp bound:*** partially identification of MAnski, mathematically guaranteed bound of ATE vs. Confidence Interval due to uncertainty of sample. 
 
 * ***Skewness:*** skewness measures how symmetric a distribution is. It is also called the third moment of a distribution.
 
