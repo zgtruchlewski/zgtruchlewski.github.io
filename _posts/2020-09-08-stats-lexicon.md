@@ -102,6 +102,18 @@ plot(DAG)
 <!-- * ***Moments of sample:*** to fit the first two moments (the mean and the standard deviation, respectively) of the sample.
 	- See also: mean, standard deviation, skewness, kurtosis.  -->
 
+* ***Mediator/Mediation:*** A mediator is a variable on the causal path between a variable A and B. 
+	- See also: direct and indirect effects. 
+
+<img src="https://zgtruchlewski.github.io/assets/img/sample/Mediator_bw.png" width="300" height="150" />
+
+```R
+library(dagitty)
+mediation <- dagitty( "dag{ A -> Mediator -> B}" ) 
+coordinates(mediation) <- list( x=c(A=0,Mediator=.5,B=1) , y=c(A=1,Mediator=1,B=1) ) 
+plot(mediation)
+```
+
 * ***Multilevel or hierarchical models:*** models whose parameters vary by groups/clusters. <!-- Gelman and Vehtari, allowing models to adapt to cluster sampling, longitudinal studies, time-series cross-sectional data, meta-analysis, and other structured settings. In a regression context, a multilevel model can be viewed as a particular parametrized covariance structure or as a probability distribution where the number of parameters increases in proportion to the data. -->
 	- See also: *cross-classified model*, *fixed effects*, *hyper priors*, *pooling*, *random effects*, *regularization*, *shrinkage*, *varying intercepts*, *varying effects*
 
