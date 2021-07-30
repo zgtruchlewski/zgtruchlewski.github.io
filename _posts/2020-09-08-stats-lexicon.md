@@ -105,7 +105,7 @@ plot(DAG)
 * ***Mediator/Mediation:*** A mediator is a variable on the causal path between a variable A and B. 
 	- See also: direct and indirect effects. 
 
-<img src="https://zgtruchlewski.github.io/assets/img/sample/Mediator_bw.png" width="300" height="50" />
+<img src="https://zgtruchlewski.github.io/assets/img/sample/Mediator_bw.png" width="300" height="25" />
 
 ```R
 library(dagitty)
