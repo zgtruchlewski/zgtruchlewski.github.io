@@ -154,14 +154,14 @@ plot(mediation)
 
 Several schools: Stability of Coefficinet visual or table-based (classic, Traunmeuller? Adolph), Bounds (Leamer, Young, Sala-i-Martin), and unobservable confounders (Blackwell, Oster).  -->
 
-* ***Significance:*** distinction between statistical and substantive
+<!-- * ***Significance:*** distinction between statistical and substantive
 	- See also: p-value. [####Significance]
 
 <img src="https://zgtruchlewski.github.io/assets/img/sample/Stargazing_BW_Negative.png" width="426" height="281" />
 
-The figure on statisitical vs. substantive significance can be replicated with the following `R` code:
+The figure on statisitical vs. substantive significance can be replicated with the following `R` code: -->
 
-```R
+<!-- ```R
 ### Data 
 x1 <- seq(-.2,.6,length=1000)
 y1 <- dnorm(x1,mean=.2, sd=.1)
@@ -200,7 +200,7 @@ axis(1, xlim=c(-1, 2), at= cbind(-1, -0.5, 0, .5, 1, 1.5, 2),
 
 * ***Sequential ignorability:*** 
 
-* ***Sharp bound:*** partially identification of MAnski, mathematically guaranteed bound of ATE vs. Confidence Interval due to uncertainty of sample. 
+* ***Sharp bound:*** partially identification of MAnski, mathematically guaranteed bound of ATE vs. Confidence Interval due to uncertainty of sample.  -->
 
 * ***Skewness:*** skewness measures how symmetric a distribution is. It is also called the third moment of a distribution.
 
