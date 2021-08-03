@@ -32,11 +32,30 @@ total effectc an be nul but mechanism can have effect. Gelato example of Aki.
 
 # Alphabetically
 
-<!-- DISTRIBUTIONS FROM BEN LAMBERT, CH. 8. 
+<!-- DISTRIBUTIONS FROM BEN LAMBERT, CH. 8.  -->
 
-* ***Berkson's paradox:***
+* ***Berkson's paradox:*** discovered by Berkson (1946), it can be called the selection-distortion effect or conditioning on a collider. The selection bias, or the act of selecting, creates a correlation between unassociated variables. Imagine they are 1 000 persons you could date. Among them beauty and niceness are randomly distributed and uncorrelated. Some are both, some are neither, and some are either. But you rank the 10% you want to date, weighting beauty and niceness equally. Your strong selection induces a (strong, negative) correlation between the unrelated beauty and niceness. How is that magic possible? Because the people you selected are either beautiful and/or nice, and because you avoid dating people who are neither nice nor beautiful. This selection creates this distortion. If you don't believe me, check the siumlation below!
+	- See also: *collider*, *selection*
 
-* ***Bias:*** See [here](https://catalogofbias.org/biases/)
+```R
+set.seed(2021)
+candidates <- 1000 # number of people you want to date
+select <- 0.1 # proportion to select
+# uncorrelated beautiness and niceness 
+beauty <- rnorm(candidates)
+niceness <- rnorm(candidates)
+# select top 10% of combined scores
+date <- beauty + niceness # total score
+nothot <- quantile( date , 1-select ) # top 10% threshold 
+selected <- ifelse( date >= nothot , TRUE , FALSE )
+# let's plot it
+plot(beauty ~ niceness, 
+     pch=ifelse( date >= nothot , 16 , 1 ) ,
+     col=ifelse( date >= nothot , "red" , "black" ))
+abline(lm(beauty[selected] ~ niceness[selected]), col="red")
+```
+
+<!-- * ***Bias:*** See [here](https://catalogofbias.org/biases/)
 
 * ***Bias-variance trade-off:*** -->
 
@@ -150,7 +169,6 @@ x3 <- seq(-1,2,length=1000)
 y3 <- dnorm(x3,mean=0.8, sd=.5)
 
 ### Plot 
-
 # Zero line
 segments(0,-.2,0,4, lwd=2, col="gray60", lty=2)
 
