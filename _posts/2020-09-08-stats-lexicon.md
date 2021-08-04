@@ -88,7 +88,8 @@ plot(collider)
 ```R
 library(dagitty)
 confounder <- dagitty( "dag{ A -> B; A <- Confounder; B <- Confounder }" ) 
-coordinates(confounder) <- list( x=c(A=0,Confounder=1,B=2) , y=c(A=1,Confounder=0,B=1) ) 
+coordinates(confounder) <- list( x=c(A=0,Confounder=1,B=2) , 
+	y=c(A=1,Confounder=0,B=1) ) 
 plot(confounder)
 ```
 
