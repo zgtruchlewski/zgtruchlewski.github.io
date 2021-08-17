@@ -34,7 +34,7 @@ total effectc an be nul but mechanism can have effect. Gelato example of Aki.
 
 <!-- DISTRIBUTIONS FROM BEN LAMBERT, CH. 8.  -->
 
-* ***Berkson's paradox:*** named after Berkson (1946), it can be called the selection-distortion effect or conditioning on a collider: here, spurrious correlation is caused by a common effect. The selection bias, or the act of selecting, creates a correlation between unassociated variables. Imagine there are 1 000 persons you could date. Among them, beauty and niceness are randomly distributed and uncorrelated. Some are both, some are neither, and some are either. But you rank the 10% you want to date, weighting beauty and niceness equally. Your strong selection induces a (strong, negative) correlation between the unrelated beauty and niceness. How is that magic possible? Because the people you selected are either beautiful and/or nice, and because you avoid dating people who are neither nice nor beautiful. This selection creates this distortion. If you don't believe me, check the siumlation below!
+* ***Berkson's paradox:*** named after Berkson (1946), it can be called the selection-distortion effect or conditioning on a collider: here, spurrious correlation is caused by a common effect. The selection bias, or the act of selecting, creates a correlation between unassociated variables. Imagine there are 1 000 persons you could date. Among them, beauty and niceness are randomly distributed and uncorrelated. Some are both, some are neither, and some are either. But you rank the 10% you want to date, weighting beauty and niceness equally. Your strong selection induces a (strong, negative) correlation between the unrelated beauty and niceness. How is that magic possible? Because the people you selected are either beautiful and/or nice, and because you avoid dating people who are neither nice nor beautiful. This selection creates this distortion. If you don't believe me, check the simulation below!
 	- See also: *collider*, *selection*
 
 <img src="https://zgtruchlewski.github.io/assets/img/sample/Berkson_bw.png" width="300" height="300" />
@@ -116,6 +116,10 @@ plot(DAG)
 * ***Hierarchical model:*** also called "multilevel models".  -->
 
 <!-- * ***Intention to treat:*** https://en.wikipedia.org/wiki/Intention-to-treat_analysis -->
+
+* ***Effect:*** the effect of a treatment on an outcome can take several forms: it can be total, direct and indirect. The total effect is the entire effect of a treatment (independent) variable on the outcome. The direct effect is the effect that is not mediated by an intervening/mediator variable (there is nothing on the path between treatment and outcome). The indirect effect is when a treatment (independent) variable impacts an outcome (dependent) variable one or more 
+intervening/mediator variables.
+	- See also: *mediation*, *intervening variable*
 
 * ***Kurtosis:*** neither an insult nor a planet. Rather, kurtosis quantifies how fat the tails of a distribution are. It's also called the fourth moment of a distribution. <!-- Lambert's Bayes book -->
 
