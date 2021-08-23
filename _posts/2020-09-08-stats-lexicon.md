@@ -128,7 +128,8 @@ intervening/mediator variables.
 
 ```R
 library(dagitty)
-Effect <- dagitty( "dag{ Effect -> Outcome; Effect -> Mediator; Mediator -> Outcome }" ) 
+Effect <- dagitty( "dag{ Effect -> Outcome; Effect -> Mediator; 
+						 Mediator -> Outcome }" ) 
 coordinates(Effect) <- list( x=c(Effect=0, Outcome=2, Mediator=1), 
 				y=c(Effect=1, Outcome=1, Mediator=0) ) 
 plot(Effect)
