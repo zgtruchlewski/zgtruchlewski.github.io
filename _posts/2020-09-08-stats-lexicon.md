@@ -36,6 +36,7 @@ total effectc an be nul but mechanism can have effect. Gelato example of Aki.
 
 * ***Berkson's paradox:*** named after Berkson (1946), it can be called the selection-distortion effect or conditioning on a collider: here, spurrious correlation is caused by a common effect. The selection bias, or the act of selecting, creates a correlation between unassociated variables. Imagine there are 1 000 persons you could date. Among them, beauty and niceness are randomly distributed and uncorrelated. Some are both, some are neither, and some are either. But you rank the 10% you want to date, weighting beauty and niceness equally. Your strong selection induces a (strong, negative) correlation between the unrelated beauty and niceness. How is that magic possible? Because the people you selected are either beautiful and/or nice, and because you avoid dating people who are neither nice nor beautiful. This selection creates this distortion. If you don't believe me, check the simulation below!
 	- See also: *collider*, *selection*
+	
 <!-- 	- https://thehardestscience.com/2014/08/04/
 	- https://towardsdatascience.com/top-3-statistical-paradoxes-in-data-science-e2dc37535d99 -->
 
