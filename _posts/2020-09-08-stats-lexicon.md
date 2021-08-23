@@ -36,6 +36,8 @@ total effectc an be nul but mechanism can have effect. Gelato example of Aki.
 
 * ***Berkson's paradox:*** named after Berkson (1946), it can be called the selection-distortion effect or conditioning on a collider: here, spurrious correlation is caused by a common effect. The selection bias, or the act of selecting, creates a correlation between unassociated variables. Imagine there are 1 000 persons you could date. Among them, beauty and niceness are randomly distributed and uncorrelated. Some are both, some are neither, and some are either. But you rank the 10% you want to date, weighting beauty and niceness equally. Your strong selection induces a (strong, negative) correlation between the unrelated beauty and niceness. How is that magic possible? Because the people you selected are either beautiful and/or nice, and because you avoid dating people who are neither nice nor beautiful. This selection creates this distortion. If you don't believe me, check the simulation below!
 	- See also: *collider*, *selection*
+<!-- 	- https://thehardestscience.com/2014/08/04/
+	- https://towardsdatascience.com/top-3-statistical-paradoxes-in-data-science-e2dc37535d99 -->
 
 <img src="https://zgtruchlewski.github.io/assets/img/sample/Berkson_bw.png" width="300" height="300" />
 
@@ -66,7 +68,7 @@ abline(lm(beauty[selected] ~ niceness[selected]), col="red")
 * ***Bootstrapping:*** or how statistics proved that the expression "pull oneself up by one's bootstraps" can actually make sense and that Baron Munchausen was a statistical precursor. Bootstrap means resampling randomly your dataset many times (thus creating many samples) to calculate an estimate, its standard errors and confidence intervals. Each of these new samples has it own characteristics (mean, median etc): if you take all these samples, you can have a distribution of these characteristics (the sampling distribution). Contrast this to standard hypothesis testing, which requires test statistics and assumptions. <!-- Source: Efron (1979) --> <!-- https://statisticsbyjim.com/hypothesis-testing/bootstrapping/ --> <!-- Gelman and Vehtari Ideas -->
 	- See also: *jackknife*, *cross validation*, *information criteria*, *hypothesis testing*
 
-* ***Collider:*** common effect of two causes. In *DAGs*, colliders are where two arrows collide (see the graph and code below). If you condition on a collider, a spurrious association arises between two causes even though there is no causal relation between them. This is due to the fact that information circulates from one cause to the effect to the second cause. It is rarely a good idea to condition on colliders in a regression, as Berkson's paradox shows!
+* ***Collider:*** common effect of two causes. In *DAGs*, colliders are where two arrows collide. If you condition on a collider, a spurrious association arises between two causes even though there is no causal relation between them. This is due to the fact that information circulates from one cause to the effect to the second cause. It is rarely a good idea to condition on colliders in a regression, as Berkson's paradox shows! <!-- Consider an automatic-timer sprinkler system where the sprinkler being on is independent of whether it is raining. Here, the weather gives no information on the sprinkler. However, given wet grass, if one observes a sunny day, one will likely conclude that the sprinklers have recently run. Correlation has been induced. From Ding and Miratrix 2015 -->
 	<!-- - --> <!-- This leads to *selection bias*: it looksassociation between A and Y even if A does not cause Y. NB: a common effect is not necessarily a collider: a common effect can be the effect of a collider. Selection bias also arises in this case if we condition on the effect of a collider. -->
 	<!-- - Example: DATING: imagine a light switch, which is our collider. You , electricity and light. If you see light is on, and switch is on, then you automatically learn that there is electricitiy. If there is electricity, and there is no light, you automatically deduce that the switch if off. -->
 	- See also: *DAG*, *selection bias*, *Berkson's paradox*, *confounder*, *mediator*
@@ -121,6 +123,15 @@ plot(DAG)
 intervening/mediator variables.
 	- See also: *mediation*, *intervening variable*
 
+<img src="https://zgtruchlewski.github.io/assets/img/sample/Effect_bw.png" width="300" height="150" />
+
+```R
+library(dagitty)
+Effect <- dagitty( "dag{ Effect -> Outcome; Effect -> Mediator; Mediator -> Outcome }" ) 
+coordinates(Effect) <- list( x=c(Effect=0, Outcome=2, Mediator=1) , y=c(Effect=1, Outcome=1, Mediator=0) ) 
+plot(Effect)
+```
+
 * ***Kurtosis:*** neither an insult nor a planet. Rather, kurtosis quantifies how fat the tails of a distribution are. It's also called the fourth moment of a distribution. <!-- Lambert's Bayes book -->
 
 <!-- * ***Likelihood:*** In Bayesian statistics, the probability model. In Bayes' formula, $p(data|theta)$. More simply, likelihood is a probability distribution. Difference between likelihood and probability: in Bayes we used the word likelihood because the data is fixed (Lambert 4.4). Likelihood does not necessarily sum up to one, while probability does. -->
@@ -128,8 +139,19 @@ intervening/mediator variables.
 <!-- * ***Moments of sample:*** to fit the first two moments (the mean and the standard deviation, respectively) of the sample.
 	- See also: mean, standard deviation, skewness, kurtosis.  -->
 
-* ***Mediator/Mediation:*** A mediator is a variable on the causal path between a variable A and B. 
-	- See also: direct and indirect effects. 
+* ***M-Bias:*** Controlling for a collider that is a pre-treatment variable. Here *Z* is a (latent) cause of *X*, the treatment, and *W* the (latent) cause of *Y*, the outcome. *Z* and *W* are uncorrelated in the simple version of the M-bias.
+
+<img src="https://zgtruchlewski.github.io/assets/img/sample/Mbias_bw.png" width="300" height="150" />
+
+```R
+library(dagitty)
+Mbias <- dagitty( " dag{ X <- Z ; Z -> M ; W -> M ; W -> Y }")
+coordinates(Mbias) <- list(x=c(X=0, Z=0, M=1, W=2, Y=2), y=c(X=2, Z=0, M=1, W=0, Y=2))
+plot(Mbias)
+```
+
+* ***Mediator/Mediation:*** A mediator is a variable on the causal path between a treatment/exposure A and an outcome B. 
+	- See also: *effects (total, direct and indirect)*
 
 <img src="https://zgtruchlewski.github.io/assets/img/sample/Mediator_bw.png" width="300" height="25" />
 
