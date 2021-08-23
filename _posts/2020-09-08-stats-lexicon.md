@@ -36,7 +36,7 @@ total effectc an be nul but mechanism can have effect. Gelato example of Aki.
 
 * ***Berkson's paradox:*** named after Berkson (1946), it can be called the selection-distortion effect or conditioning on a collider: here, spurrious correlation is caused by a common effect. The selection bias, or the act of selecting, creates a correlation between unassociated variables. Imagine there are 1 000 persons you could date. Among them, beauty and niceness are randomly distributed and uncorrelated. Some are both, some are neither, and some are either. But you rank the 10% you want to date, weighting beauty and niceness equally. Your strong selection induces a (strong, negative) correlation between the unrelated beauty and niceness. How is that magic possible? Because the people you selected are either beautiful and/or nice, and because you avoid dating people who are neither nice nor beautiful. This selection creates this distortion. If you don't believe me, check the simulation below!
 	- See also: *collider*, *selection*
-	
+
 <!-- 	- https://thehardestscience.com/2014/08/04/
 	- https://towardsdatascience.com/top-3-statistical-paradoxes-in-data-science-e2dc37535d99 -->
 
@@ -92,7 +92,7 @@ plot(collider)
 library(dagitty)
 confounder <- dagitty( "dag{ A -> B; A <- Confounder; B <- Confounder }" ) 
 coordinates(confounder) <- list( x=c(A=0,Confounder=1,B=2) , 
-	y=c(A=1,Confounder=0,B=1) ) 
+		y=c(A=1,Confounder=0,B=1) ) 
 plot(confounder)
 ```
 
@@ -105,7 +105,7 @@ plot(confounder)
 library(dagitty)
 DAG <- dagitty( "dag{ Directed -> Acyclic; Acyclic -> Graph; Graph -> Inference; 
 		Directed -> Causal; Causal -> Inference }" ) 
-coordinates(DAG) <- list( x=c(Directed=0, Acyclic=.5, Graph=1, Causal=0,Inference=1) ,
+coordinates(DAG) <- list(x=c(Directed=0, Acyclic=.5, Graph=1, Causal=0,Inference=1),
 		y=c(Directed=0, Acyclic=.5, Graph=0, Causal=1,Inference=1) ) 
 plot(DAG)
 ```
@@ -129,7 +129,8 @@ intervening/mediator variables.
 ```R
 library(dagitty)
 Effect <- dagitty( "dag{ Effect -> Outcome; Effect -> Mediator; Mediator -> Outcome }" ) 
-coordinates(Effect) <- list( x=c(Effect=0, Outcome=2, Mediator=1) , y=c(Effect=1, Outcome=1, Mediator=0) ) 
+coordinates(Effect) <- list( x=c(Effect=0, Outcome=2, Mediator=1), 
+				y=c(Effect=1, Outcome=1, Mediator=0) ) 
 plot(Effect)
 ```
 
