@@ -105,8 +105,8 @@ plot(confounder)
 library(dagitty)
 DAG <- dagitty( "dag{ Directed -> Acyclic; Acyclic -> Graph; Graph -> Inference; 
 		Directed -> Causal; Causal -> Inference }" ) 
-coordinates(DAG) <- list(x=c(Directed=0, Acyclic=.5, Graph=1, Causal=0,Inference=1),
-		y=c(Directed=0, Acyclic=.5, Graph=0, Causal=1,Inference=1) ) 
+coordinates(DAG) <- list(x=c(Directed=0,Acyclic=.5,Graph=1,Causal=0,Inference=1),
+		y=c(Directed=0,Acyclic=.5,Graph=0,Causal=1,Inference=1)) 
 plot(DAG)
 ```
 
