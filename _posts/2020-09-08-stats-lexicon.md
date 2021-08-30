@@ -122,7 +122,7 @@ plot(DAG)
 
 * ***Effect:*** the effect of a treatment on an outcome can take several forms: it can be total, direct and indirect. The total effect is the entire effect of a treatment (independent) variable on the outcome. The direct effect is the effect that is not mediated by an intervening/mediator variable (there is nothing on the path between treatment and outcome). The indirect effect is when a treatment (independent) variable impacts an outcome (dependent) variable one or more 
 intervening/mediator variables.
-	- See also: *mediation*, *intervening variable*
+	- See also: *mediation*, *intervening variable*, *table 2 fallacy*
 
 <img src="https://zgtruchlewski.github.io/assets/img/sample/Effect_bw.png" width="300" height="150" />
 
@@ -234,7 +234,9 @@ axis(1, xlim=c(-1, 2), at= cbind(-1, -0.5, 0, .5, 1, 1.5, 2),
 
 * ***Skewness:*** skewness measures how symmetric a distribution is. It is also called the third moment of a distribution.
 
-<!-- * ***Table 2 fallacy:*** https://academic.oup.com/aje/article/177/4/292/147738 -->
+* ***Table 2 fallacy:*** When you present regression results in a table (typically the second table after the descriptive statistics of your data) and interpret all coefficients, from your pet variable (the "exposure") and the confounders, as if they were all the same total effects. But this is not necessarily the case: depending on your DAG, your coefficients can represent for instance total or direct effects. Also, while the effect of your exposure may be unconfounded, it does not imply that the effect of the confounders is also unconfounded (e.g. because of unmeasured confounders). Well, that was a mouthful! Welcome to stats!
+	- See also: *effect*, *DAG*
+	- Source: Westreich and Greenland (2013)
 
 <!-- These are the most important concepts we've seen in McElreath's book and in the course. Try to skim this through and see what sticks and what does not. Also, if you come by better definitions, please do send them to me!
 
