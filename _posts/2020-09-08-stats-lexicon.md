@@ -236,7 +236,7 @@ axis(1, xlim=c(-1, 2), at= cbind(-1, -0.5, 0, .5, 1, 1.5, 2),
 
 * ***Table 2 fallacy:*** When you present regression results in a table (typically the second table after the descriptive statistics of your data) and interpret all coefficients from your pet variable (the "exposure") to the confounders as if they were all the same causal total effects. But this is not necessarily the case: depending on your DAG, your coefficients can represent for instance total or direct effects. Also, while the effect of your exposure may be unconfounded, it does not imply that the effect of the confounders is also unconfounded (e.g. because of unmeasured confounders). Well, that was a mouthful! Welcome to stats!
 	- See also: *effect*, *DAG*
-	- Source: Westreich and Greenland (2013)
+	- Source: [Westreich and Greenland (2013)](https://academic.oup.com/aje/article/177/4/292/147738)
 
 <!-- These are the most important concepts we've seen in McElreath's book and in the course. Try to skim this through and see what sticks and what does not. Also, if you come by better definitions, please do send them to me!
 
