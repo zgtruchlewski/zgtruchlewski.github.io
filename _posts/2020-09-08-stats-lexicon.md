@@ -234,7 +234,7 @@ axis(1, xlim=c(-1, 2), at= cbind(-1, -0.5, 0, .5, 1, 1.5, 2),
 
 * ***Skewness:*** skewness measures how symmetric a distribution is. It is also called the third moment of a distribution.
 
-* ***Table 2 fallacy:*** When you present regression results in a table (typically the second table after the descriptive statistics of your data) and interpret all coefficients, from your pet variable (the "exposure") and the confounders, as if they were all the same total effects. But this is not necessarily the case: depending on your DAG, your coefficients can represent for instance total or direct effects. Also, while the effect of your exposure may be unconfounded, it does not imply that the effect of the confounders is also unconfounded (e.g. because of unmeasured confounders). Well, that was a mouthful! Welcome to stats!
+* ***Table 2 fallacy:*** When you present regression results in a table (typically the second table after the descriptive statistics of your data) and interpret all coefficients from your pet variable (the "exposure") to the confounders as if they were all the same causal total effects. But this is not necessarily the case: depending on your DAG, your coefficients can represent for instance total or direct effects. Also, while the effect of your exposure may be unconfounded, it does not imply that the effect of the confounders is also unconfounded (e.g. because of unmeasured confounders). Well, that was a mouthful! Welcome to stats!
 	- See also: *effect*, *DAG*
 	- Source: Westreich and Greenland (2013)
 
