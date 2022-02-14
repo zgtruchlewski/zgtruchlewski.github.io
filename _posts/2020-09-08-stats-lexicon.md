@@ -16,6 +16,8 @@ I have not yet come across a statistical book with an accessible glossary. So I 
 
 Also, caveat lector!
 
+<!-- https://lost-stats.github.io/ -->
+
 <!-- "“Unfortunately, I have yet to find a single person who can explain what ignorability means in a language spoken by those who need to make this assumption or assess its plausibility in a given problem.” (The book of Why, p. 281)."
 
 Imai 2010 (focus on NDE - fn 3) vs. Balckwell (focus on CDE)
