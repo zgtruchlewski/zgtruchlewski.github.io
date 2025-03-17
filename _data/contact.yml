@@ -13,7 +13,8 @@
 #  icon: 'fab fa-twitter'
 
 -
-  icon: 'fa-bluesky'
+  type: twitter
+  icon: 'fab fa-bluesky'
   url: 'https://web-cdn.bsky.app/profile/ztruchlewski.bsky.social'
 
 -
