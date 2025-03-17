@@ -13,6 +13,10 @@
   icon: 'fab fa-twitter'
 
 -
+  icon: 'fa-brands fa-bluesky'
+  url: 'https://web-cdn.bsky.app/profile/ztruchlewski.bsky.social'
+
+-
   icon: 'fas fa-graduation-cap'
   url:  'https://scholar.google.com/citations?user=5hv_rE0AAAAJ&hl=fr&oi=ao'
 
