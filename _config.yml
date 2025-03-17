@@ -33,7 +33,7 @@ social:
   email: z.g.truchlewski@uva.nl             # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/ZTruchlewski      # change to your twitter homepage
+    - https://web-cdn.bsky.app/profile/ztruchlewski.bsky.social     # change to your twitter homepage
     - https://github.com/zgtruchlewski       # change to your github homepage
     # Uncomment below to add more social links
     - https://web-cdn.bsky.app/profile/ztruchlewski.bsky.social
