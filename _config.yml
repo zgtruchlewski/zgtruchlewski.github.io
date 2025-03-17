@@ -36,7 +36,7 @@ social:
     - https://twitter.com/ZTruchlewski      # change to your twitter homepage
     - https://github.com/zgtruchlewski       # change to your github homepage
     # Uncomment below to add more social links
-    # - https://www.facebook.com/username
+    - https://web-cdn.bsky.app/profile/ztruchlewski.bsky.social
     - https://www.linkedin.com/in/zbigniewtruchlewski
 
 google_site_verification: google_meta_tag_verification # change to your verification string
