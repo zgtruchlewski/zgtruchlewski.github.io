@@ -8,14 +8,9 @@
   type: github
   icon: 'fab fa-github-square'
 
-#-
-#  type: twitter
-#  icon: 'fab fa-twitter'
-
 -
   type: twitter
-  icon: 'fab fa-bluesky'
-  url: 'https://web-cdn.bsky.app/profile/ztruchlewski.bsky.social'
+  icon: 'fab fa-twitter'
 
 -
   icon: 'fas fa-graduation-cap'
