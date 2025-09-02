@@ -3,11 +3,11 @@ title: Hello!
 
 ---
 
-I am a tenured Assistant Professor in European Politics at the [University of Amsterdam](https://aissr.uva.nl/profile/t/r/z.g.truchlewski/z.g.truchlewski.html), a Research Fellow at the [Robert Schuman Center of the EUI](https://www.eui.eu/people?id=zbigniew-grzegorz-truchlewski) and Visiting Fellow at the [London School of Economics](https://www.lse.ac.uk/european-institute). I participate in the [ERC SOLID Project](https://solid-erc.eu) where I work with [Waltraud Schelkle](https://www.lse.ac.uk/european-institute/people/Schelkle-Waltraud), [Maurizio Ferrera](https://maurizioferrera.wordpress.com/en/) and [Hanspeter Kriesi](https://www.eui.eu/people?id=hanspeter-kriesi) and [many other brilliant co-authors](https://solid-erc.eu/team/). 
+I am an Associate Professor in European Political Economy and Politics at the University of Geneva ([GSI](https://www.unige.ch/gsi/) and [SPERI](https://www.unige.ch/sciences-societe/speri/)), a Research Fellow at the [Robert Schuman Center of the EUI](https://www.eui.eu/people?id=zbigniew-grzegorz-truchlewski) and Visiting Fellow at the [London School of Economics](https://www.lse.ac.uk/european-institute). I participate in the [ERC SOLID Project](https://solid-erc.eu) where I work with [Waltraud Schelkle](https://www.lse.ac.uk/european-institute/people/Schelkle-Waltraud), [Maurizio Ferrera](https://maurizioferrera.wordpress.com/en/) and [Hanspeter Kriesi](https://www.eui.eu/people?id=hanspeter-kriesi) and [many other brilliant co-authors](https://solid-erc.eu/team/). Previously I was a member of the great PETGOV group at the [University of Amsterdam](https://aissr.uva.nl/content/research-groups/political-economy-and-transnational-governance/petgov.html)
 
 As a Europeanist and a political economist, I work on EU integration, polity formation, crisis politics and solidarity and austerity (for my publications, see here on [Google Scholar](https://scholar.google.com/citations?user=5hv_rE0AAAAJ&hl=en&oi=ao) and here on [ResearchGate](https://www.researchgate.net/profile/Zbigniew-Truchlewski)).
 
-I wrote 2 books with my wonderful co-authors:
+With my wonderful co-authors, I wrote 2 books:
 
 - With Hanspeter Kriesi, Ioana-Elena Oana and Alexandru D. Moise, [Pandemic Polity-Building: How Covid-19 Shaped the European Union](https://github.com/zgtruchlewski/PandemicPolity), Oxford University Press, June 2025.
 - With Ioana-Elena Oana and Alexandru D. Moise, [Demand for EU Polity Building in the Shadow of the Russian Threat](https://www.cambridge.org/core/elements/demand-for-eu-polity-building-in-the-shadow-of-the-russian-threat/A5D13AB578DED4D35C623B87DA4F8B92), Cambridge University Press, March 2025. 
