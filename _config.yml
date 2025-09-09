@@ -10,7 +10,7 @@
 
 title: Zbigniew Truchlewski                          # the main title
 
-tagline: Assistant Professor in EU Politics (tenured) at the University of Amsterdam  # it will display as the sub-title
+tagline: Associate Professor in EU Political Economy and Politics at the University of Geneva  # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   Website of Zbigniew Truchlewski 
@@ -30,7 +30,7 @@ twitter:
 
 social:
   name: Zbigniew Truchlewski                  # it will shows as the copyright owner in Footer
-  email: z.g.truchlewski@uva.nl             # change to your email address
+  email: zbigniew.truchlewski@unige.ch            # change to your email address
   links:
     # The first element serves as the copyright owner's link
     - https://web-cdn.bsky.app/profile/ztruchlewski.bsky.social     # change to your twitter homepage
